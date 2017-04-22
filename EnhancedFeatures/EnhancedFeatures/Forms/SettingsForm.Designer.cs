@@ -171,6 +171,36 @@
             this.ExportToCollectionXmlCheckBox = new System.Windows.Forms.CheckBox();
             this.UiLanguageComboBox = new System.Windows.Forms.ComboBox();
             this.UiLanguageLabel = new System.Windows.Forms.Label();
+            this.Feature36Label = new System.Windows.Forms.Label();
+            this.Feature36TextBox = new System.Windows.Forms.TextBox();
+            this.Feature38Label = new System.Windows.Forms.Label();
+            this.Feature37Label = new System.Windows.Forms.Label();
+            this.Feature38TextBox = new System.Windows.Forms.TextBox();
+            this.Feature37TextBox = new System.Windows.Forms.TextBox();
+            this.Feature40Label = new System.Windows.Forms.Label();
+            this.Feature39Label = new System.Windows.Forms.Label();
+            this.Feature40TextBox = new System.Windows.Forms.TextBox();
+            this.Feature39TextBox = new System.Windows.Forms.TextBox();
+            this.Feature31Label = new System.Windows.Forms.Label();
+            this.Feature31TextBox = new System.Windows.Forms.TextBox();
+            this.Feature33Label = new System.Windows.Forms.Label();
+            this.Feature32Label = new System.Windows.Forms.Label();
+            this.Feature33TextBox = new System.Windows.Forms.TextBox();
+            this.Feature32TextBox = new System.Windows.Forms.TextBox();
+            this.Feature35Label = new System.Windows.Forms.Label();
+            this.Feature34Label = new System.Windows.Forms.Label();
+            this.Feature35TextBox = new System.Windows.Forms.TextBox();
+            this.Feature34TextBox = new System.Windows.Forms.TextBox();
+            this.Feature40CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature39CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature38CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature37CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature36CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature35CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature34CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature33CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature32CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature31CheckBox = new System.Windows.Forms.CheckBox();
             this.MainTabControl.SuspendLayout();
             this.LabelTabPage.SuspendLayout();
             this.ExcelColumnsTabPage.SuspendLayout();
@@ -193,7 +223,7 @@
             // DiscardButton
             // 
             this.DiscardButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.DiscardButton.Location = new System.Drawing.Point(598, 530);
+            this.DiscardButton.Location = new System.Drawing.Point(598, 580);
             this.DiscardButton.Name = "DiscardButton";
             this.DiscardButton.Size = new System.Drawing.Size(75, 23);
             this.DiscardButton.TabIndex = 2;
@@ -203,7 +233,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(507, 530);
+            this.SaveButton.Location = new System.Drawing.Point(507, 580);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(85, 23);
             this.SaveButton.TabIndex = 1;
@@ -219,11 +249,31 @@
             this.MainTabControl.Location = new System.Drawing.Point(12, 12);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(661, 512);
+            this.MainTabControl.Size = new System.Drawing.Size(661, 560);
             this.MainTabControl.TabIndex = 0;
             // 
             // LabelTabPage
             // 
+            this.LabelTabPage.Controls.Add(this.Feature36Label);
+            this.LabelTabPage.Controls.Add(this.Feature36TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature38Label);
+            this.LabelTabPage.Controls.Add(this.Feature37Label);
+            this.LabelTabPage.Controls.Add(this.Feature38TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature37TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature40Label);
+            this.LabelTabPage.Controls.Add(this.Feature39Label);
+            this.LabelTabPage.Controls.Add(this.Feature40TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature39TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature31Label);
+            this.LabelTabPage.Controls.Add(this.Feature31TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature33Label);
+            this.LabelTabPage.Controls.Add(this.Feature32Label);
+            this.LabelTabPage.Controls.Add(this.Feature33TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature32TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature35Label);
+            this.LabelTabPage.Controls.Add(this.Feature34Label);
+            this.LabelTabPage.Controls.Add(this.Feature35TextBox);
+            this.LabelTabPage.Controls.Add(this.Feature34TextBox);
             this.LabelTabPage.Controls.Add(this.Feature26Label);
             this.LabelTabPage.Controls.Add(this.Feature26TextBox);
             this.LabelTabPage.Controls.Add(this.Feature28Label);
@@ -287,7 +337,7 @@
             this.LabelTabPage.Location = new System.Drawing.Point(4, 22);
             this.LabelTabPage.Name = "LabelTabPage";
             this.LabelTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.LabelTabPage.Size = new System.Drawing.Size(653, 486);
+            this.LabelTabPage.Size = new System.Drawing.Size(653, 534);
             this.LabelTabPage.TabIndex = 0;
             this.LabelTabPage.Text = "Labels";
             this.LabelTabPage.UseVisualStyleBackColor = true;
@@ -295,257 +345,257 @@
             // Feature26Label
             // 
             this.Feature26Label.AutoSize = true;
-            this.Feature26Label.Location = new System.Drawing.Point(330, 269);
+            this.Feature26Label.Location = new System.Drawing.Point(328, 139);
             this.Feature26Label.Name = "Feature26Label";
             this.Feature26Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature26Label.TabIndex = 54;
+            this.Feature26Label.TabIndex = 50;
             this.Feature26Label.Text = "Feature 26:";
             // 
             // Feature26TextBox
             // 
-            this.Feature26TextBox.Location = new System.Drawing.Point(396, 266);
+            this.Feature26TextBox.Location = new System.Drawing.Point(394, 136);
             this.Feature26TextBox.MaxLength = 30;
             this.Feature26TextBox.Name = "Feature26TextBox";
             this.Feature26TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature26TextBox.TabIndex = 55;
+            this.Feature26TextBox.TabIndex = 51;
             // 
             // Feature28Label
             // 
             this.Feature28Label.AutoSize = true;
-            this.Feature28Label.Location = new System.Drawing.Point(330, 321);
+            this.Feature28Label.Location = new System.Drawing.Point(328, 191);
             this.Feature28Label.Name = "Feature28Label";
             this.Feature28Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature28Label.TabIndex = 58;
+            this.Feature28Label.TabIndex = 54;
             this.Feature28Label.Text = "Feature 28:";
             // 
             // Feature27Label
             // 
             this.Feature27Label.AutoSize = true;
-            this.Feature27Label.Location = new System.Drawing.Point(330, 295);
+            this.Feature27Label.Location = new System.Drawing.Point(328, 165);
             this.Feature27Label.Name = "Feature27Label";
             this.Feature27Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature27Label.TabIndex = 56;
+            this.Feature27Label.TabIndex = 52;
             this.Feature27Label.Text = "Feature 27:";
             // 
             // Feature28TextBox
             // 
-            this.Feature28TextBox.Location = new System.Drawing.Point(396, 318);
+            this.Feature28TextBox.Location = new System.Drawing.Point(394, 188);
             this.Feature28TextBox.MaxLength = 30;
             this.Feature28TextBox.Name = "Feature28TextBox";
             this.Feature28TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature28TextBox.TabIndex = 59;
+            this.Feature28TextBox.TabIndex = 55;
             // 
             // Feature27TextBox
             // 
-            this.Feature27TextBox.Location = new System.Drawing.Point(396, 292);
+            this.Feature27TextBox.Location = new System.Drawing.Point(394, 162);
             this.Feature27TextBox.MaxLength = 30;
             this.Feature27TextBox.Name = "Feature27TextBox";
             this.Feature27TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature27TextBox.TabIndex = 57;
+            this.Feature27TextBox.TabIndex = 53;
             // 
             // Feature30Label
             // 
             this.Feature30Label.AutoSize = true;
-            this.Feature30Label.Location = new System.Drawing.Point(330, 373);
+            this.Feature30Label.Location = new System.Drawing.Point(328, 243);
             this.Feature30Label.Name = "Feature30Label";
             this.Feature30Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature30Label.TabIndex = 62;
+            this.Feature30Label.TabIndex = 58;
             this.Feature30Label.Text = "Feature 30:";
             // 
             // Feature29Label
             // 
             this.Feature29Label.AutoSize = true;
-            this.Feature29Label.Location = new System.Drawing.Point(330, 347);
+            this.Feature29Label.Location = new System.Drawing.Point(328, 217);
             this.Feature29Label.Name = "Feature29Label";
             this.Feature29Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature29Label.TabIndex = 60;
+            this.Feature29Label.TabIndex = 56;
             this.Feature29Label.Text = "Feature 29:";
             // 
             // Feature30TextBox
             // 
-            this.Feature30TextBox.Location = new System.Drawing.Point(396, 370);
+            this.Feature30TextBox.Location = new System.Drawing.Point(394, 240);
             this.Feature30TextBox.MaxLength = 30;
             this.Feature30TextBox.Name = "Feature30TextBox";
             this.Feature30TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature30TextBox.TabIndex = 63;
+            this.Feature30TextBox.TabIndex = 59;
             // 
             // Feature29TextBox
             // 
-            this.Feature29TextBox.Location = new System.Drawing.Point(396, 344);
+            this.Feature29TextBox.Location = new System.Drawing.Point(394, 214);
             this.Feature29TextBox.MaxLength = 30;
             this.Feature29TextBox.Name = "Feature29TextBox";
             this.Feature29TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature29TextBox.TabIndex = 61;
+            this.Feature29TextBox.TabIndex = 57;
             // 
             // Feature21Label
             // 
             this.Feature21Label.AutoSize = true;
-            this.Feature21Label.Location = new System.Drawing.Point(330, 139);
+            this.Feature21Label.Location = new System.Drawing.Point(328, 9);
             this.Feature21Label.Name = "Feature21Label";
             this.Feature21Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature21Label.TabIndex = 44;
+            this.Feature21Label.TabIndex = 40;
             this.Feature21Label.Text = "Feature 21:";
             // 
             // Feature21TextBox
             // 
-            this.Feature21TextBox.Location = new System.Drawing.Point(396, 136);
+            this.Feature21TextBox.Location = new System.Drawing.Point(394, 6);
             this.Feature21TextBox.MaxLength = 30;
             this.Feature21TextBox.Name = "Feature21TextBox";
             this.Feature21TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature21TextBox.TabIndex = 45;
+            this.Feature21TextBox.TabIndex = 41;
             // 
             // Feature23Label
             // 
             this.Feature23Label.AutoSize = true;
-            this.Feature23Label.Location = new System.Drawing.Point(330, 191);
+            this.Feature23Label.Location = new System.Drawing.Point(328, 61);
             this.Feature23Label.Name = "Feature23Label";
             this.Feature23Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature23Label.TabIndex = 48;
+            this.Feature23Label.TabIndex = 44;
             this.Feature23Label.Text = "Feature 23:";
             // 
             // Feature22Label
             // 
             this.Feature22Label.AutoSize = true;
-            this.Feature22Label.Location = new System.Drawing.Point(330, 165);
+            this.Feature22Label.Location = new System.Drawing.Point(328, 35);
             this.Feature22Label.Name = "Feature22Label";
             this.Feature22Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature22Label.TabIndex = 46;
+            this.Feature22Label.TabIndex = 42;
             this.Feature22Label.Text = "Feature 22:";
             // 
             // Feature23TextBox
             // 
-            this.Feature23TextBox.Location = new System.Drawing.Point(396, 188);
+            this.Feature23TextBox.Location = new System.Drawing.Point(394, 58);
             this.Feature23TextBox.MaxLength = 30;
             this.Feature23TextBox.Name = "Feature23TextBox";
             this.Feature23TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature23TextBox.TabIndex = 49;
+            this.Feature23TextBox.TabIndex = 45;
             // 
             // Feature22TextBox
             // 
-            this.Feature22TextBox.Location = new System.Drawing.Point(396, 162);
+            this.Feature22TextBox.Location = new System.Drawing.Point(394, 32);
             this.Feature22TextBox.MaxLength = 30;
             this.Feature22TextBox.Name = "Feature22TextBox";
             this.Feature22TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature22TextBox.TabIndex = 47;
+            this.Feature22TextBox.TabIndex = 43;
             // 
             // Feature25Label
             // 
             this.Feature25Label.AutoSize = true;
-            this.Feature25Label.Location = new System.Drawing.Point(330, 243);
+            this.Feature25Label.Location = new System.Drawing.Point(328, 113);
             this.Feature25Label.Name = "Feature25Label";
             this.Feature25Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature25Label.TabIndex = 52;
+            this.Feature25Label.TabIndex = 48;
             this.Feature25Label.Text = "Feature 25:";
             // 
             // Feature24Label
             // 
             this.Feature24Label.AutoSize = true;
-            this.Feature24Label.Location = new System.Drawing.Point(330, 217);
+            this.Feature24Label.Location = new System.Drawing.Point(328, 87);
             this.Feature24Label.Name = "Feature24Label";
             this.Feature24Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature24Label.TabIndex = 50;
+            this.Feature24Label.TabIndex = 46;
             this.Feature24Label.Text = "Feature 24:";
             // 
             // Feature25TextBox
             // 
-            this.Feature25TextBox.Location = new System.Drawing.Point(396, 240);
+            this.Feature25TextBox.Location = new System.Drawing.Point(394, 110);
             this.Feature25TextBox.MaxLength = 30;
             this.Feature25TextBox.Name = "Feature25TextBox";
             this.Feature25TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature25TextBox.TabIndex = 53;
+            this.Feature25TextBox.TabIndex = 49;
             // 
             // Feature24TextBox
             // 
-            this.Feature24TextBox.Location = new System.Drawing.Point(396, 214);
+            this.Feature24TextBox.Location = new System.Drawing.Point(394, 84);
             this.Feature24TextBox.MaxLength = 30;
             this.Feature24TextBox.Name = "Feature24TextBox";
             this.Feature24TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature24TextBox.TabIndex = 51;
+            this.Feature24TextBox.TabIndex = 47;
             // 
             // Feature16Label
             // 
             this.Feature16Label.AutoSize = true;
-            this.Feature16Label.Location = new System.Drawing.Point(330, 9);
+            this.Feature16Label.Location = new System.Drawing.Point(5, 399);
             this.Feature16Label.Name = "Feature16Label";
             this.Feature16Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature16Label.TabIndex = 34;
+            this.Feature16Label.TabIndex = 30;
             this.Feature16Label.Text = "Feature 16:";
             // 
             // Feature16TextBox
             // 
-            this.Feature16TextBox.Location = new System.Drawing.Point(396, 6);
+            this.Feature16TextBox.Location = new System.Drawing.Point(74, 396);
             this.Feature16TextBox.MaxLength = 30;
             this.Feature16TextBox.Name = "Feature16TextBox";
             this.Feature16TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature16TextBox.TabIndex = 35;
+            this.Feature16TextBox.TabIndex = 31;
             // 
             // Feature18Label
             // 
             this.Feature18Label.AutoSize = true;
-            this.Feature18Label.Location = new System.Drawing.Point(330, 61);
+            this.Feature18Label.Location = new System.Drawing.Point(8, 451);
             this.Feature18Label.Name = "Feature18Label";
             this.Feature18Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature18Label.TabIndex = 38;
+            this.Feature18Label.TabIndex = 34;
             this.Feature18Label.Text = "Feature 18:";
             // 
             // Feature17Label
             // 
             this.Feature17Label.AutoSize = true;
-            this.Feature17Label.Location = new System.Drawing.Point(330, 35);
+            this.Feature17Label.Location = new System.Drawing.Point(8, 425);
             this.Feature17Label.Name = "Feature17Label";
             this.Feature17Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature17Label.TabIndex = 36;
+            this.Feature17Label.TabIndex = 32;
             this.Feature17Label.Text = "Feature 17:";
             // 
             // Feature18TextBox
             // 
-            this.Feature18TextBox.Location = new System.Drawing.Point(396, 58);
+            this.Feature18TextBox.Location = new System.Drawing.Point(74, 448);
             this.Feature18TextBox.MaxLength = 30;
             this.Feature18TextBox.Name = "Feature18TextBox";
             this.Feature18TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature18TextBox.TabIndex = 39;
+            this.Feature18TextBox.TabIndex = 35;
             // 
             // Feature17TextBox
             // 
-            this.Feature17TextBox.Location = new System.Drawing.Point(396, 32);
+            this.Feature17TextBox.Location = new System.Drawing.Point(74, 422);
             this.Feature17TextBox.MaxLength = 30;
             this.Feature17TextBox.Name = "Feature17TextBox";
             this.Feature17TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature17TextBox.TabIndex = 37;
+            this.Feature17TextBox.TabIndex = 33;
             // 
             // Feature20Label
             // 
             this.Feature20Label.AutoSize = true;
-            this.Feature20Label.Location = new System.Drawing.Point(330, 113);
+            this.Feature20Label.Location = new System.Drawing.Point(8, 503);
             this.Feature20Label.Name = "Feature20Label";
             this.Feature20Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature20Label.TabIndex = 42;
+            this.Feature20Label.TabIndex = 38;
             this.Feature20Label.Text = "Feature 20:";
             // 
             // Feature19Label
             // 
             this.Feature19Label.AutoSize = true;
-            this.Feature19Label.Location = new System.Drawing.Point(330, 87);
+            this.Feature19Label.Location = new System.Drawing.Point(8, 477);
             this.Feature19Label.Name = "Feature19Label";
             this.Feature19Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature19Label.TabIndex = 40;
+            this.Feature19Label.TabIndex = 36;
             this.Feature19Label.Text = "Feature 19:";
             // 
             // Feature20TextBox
             // 
-            this.Feature20TextBox.Location = new System.Drawing.Point(396, 110);
+            this.Feature20TextBox.Location = new System.Drawing.Point(74, 500);
             this.Feature20TextBox.MaxLength = 30;
             this.Feature20TextBox.Name = "Feature20TextBox";
             this.Feature20TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature20TextBox.TabIndex = 43;
+            this.Feature20TextBox.TabIndex = 39;
             // 
             // Feature19TextBox
             // 
-            this.Feature19TextBox.Location = new System.Drawing.Point(396, 84);
+            this.Feature19TextBox.Location = new System.Drawing.Point(74, 474);
             this.Feature19TextBox.MaxLength = 30;
             this.Feature19TextBox.Name = "Feature19TextBox";
             this.Feature19TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature19TextBox.TabIndex = 41;
+            this.Feature19TextBox.TabIndex = 37;
             // 
             // Feature11Label
             // 
@@ -553,7 +603,7 @@
             this.Feature11Label.Location = new System.Drawing.Point(6, 269);
             this.Feature11Label.Name = "Feature11Label";
             this.Feature11Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature11Label.TabIndex = 24;
+            this.Feature11Label.TabIndex = 20;
             this.Feature11Label.Text = "Feature 11:";
             // 
             // Feature11TextBox
@@ -562,7 +612,7 @@
             this.Feature11TextBox.MaxLength = 30;
             this.Feature11TextBox.Name = "Feature11TextBox";
             this.Feature11TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature11TextBox.TabIndex = 25;
+            this.Feature11TextBox.TabIndex = 21;
             // 
             // Feature13Label
             // 
@@ -570,7 +620,7 @@
             this.Feature13Label.Location = new System.Drawing.Point(6, 321);
             this.Feature13Label.Name = "Feature13Label";
             this.Feature13Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature13Label.TabIndex = 28;
+            this.Feature13Label.TabIndex = 24;
             this.Feature13Label.Text = "Feature 13:";
             // 
             // Feature12Label
@@ -579,7 +629,7 @@
             this.Feature12Label.Location = new System.Drawing.Point(6, 295);
             this.Feature12Label.Name = "Feature12Label";
             this.Feature12Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature12Label.TabIndex = 26;
+            this.Feature12Label.TabIndex = 22;
             this.Feature12Label.Text = "Feature 12:";
             // 
             // Feature13TextBox
@@ -588,7 +638,7 @@
             this.Feature13TextBox.MaxLength = 30;
             this.Feature13TextBox.Name = "Feature13TextBox";
             this.Feature13TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature13TextBox.TabIndex = 29;
+            this.Feature13TextBox.TabIndex = 25;
             // 
             // Feature12TextBox
             // 
@@ -596,7 +646,7 @@
             this.Feature12TextBox.MaxLength = 30;
             this.Feature12TextBox.Name = "Feature12TextBox";
             this.Feature12TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature12TextBox.TabIndex = 27;
+            this.Feature12TextBox.TabIndex = 23;
             // 
             // Feature15Label
             // 
@@ -604,7 +654,7 @@
             this.Feature15Label.Location = new System.Drawing.Point(6, 373);
             this.Feature15Label.Name = "Feature15Label";
             this.Feature15Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature15Label.TabIndex = 32;
+            this.Feature15Label.TabIndex = 28;
             this.Feature15Label.Text = "Feature 15:";
             // 
             // Feature14Label
@@ -613,7 +663,7 @@
             this.Feature14Label.Location = new System.Drawing.Point(6, 347);
             this.Feature14Label.Name = "Feature14Label";
             this.Feature14Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature14Label.TabIndex = 30;
+            this.Feature14Label.TabIndex = 26;
             this.Feature14Label.Text = "Feature 14:";
             // 
             // Feature15TextBox
@@ -622,7 +672,7 @@
             this.Feature15TextBox.MaxLength = 30;
             this.Feature15TextBox.Name = "Feature15TextBox";
             this.Feature15TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature15TextBox.TabIndex = 33;
+            this.Feature15TextBox.TabIndex = 29;
             // 
             // Feature14TextBox
             // 
@@ -630,7 +680,7 @@
             this.Feature14TextBox.MaxLength = 30;
             this.Feature14TextBox.Name = "Feature14TextBox";
             this.Feature14TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature14TextBox.TabIndex = 31;
+            this.Feature14TextBox.TabIndex = 27;
             // 
             // Feature6Label
             // 
@@ -638,7 +688,7 @@
             this.Feature6Label.Location = new System.Drawing.Point(6, 139);
             this.Feature6Label.Name = "Feature6Label";
             this.Feature6Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature6Label.TabIndex = 14;
+            this.Feature6Label.TabIndex = 10;
             this.Feature6Label.Text = "Feature 6:";
             // 
             // Feature6TextBox
@@ -647,7 +697,7 @@
             this.Feature6TextBox.MaxLength = 30;
             this.Feature6TextBox.Name = "Feature6TextBox";
             this.Feature6TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature6TextBox.TabIndex = 15;
+            this.Feature6TextBox.TabIndex = 11;
             // 
             // Feature8Label
             // 
@@ -655,7 +705,7 @@
             this.Feature8Label.Location = new System.Drawing.Point(5, 193);
             this.Feature8Label.Name = "Feature8Label";
             this.Feature8Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature8Label.TabIndex = 18;
+            this.Feature8Label.TabIndex = 14;
             this.Feature8Label.Text = "Feature 8:";
             // 
             // Feature7Label
@@ -664,7 +714,7 @@
             this.Feature7Label.Location = new System.Drawing.Point(6, 165);
             this.Feature7Label.Name = "Feature7Label";
             this.Feature7Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature7Label.TabIndex = 16;
+            this.Feature7Label.TabIndex = 12;
             this.Feature7Label.Text = "Feature 7:";
             // 
             // Feature8TextBox
@@ -673,7 +723,7 @@
             this.Feature8TextBox.MaxLength = 30;
             this.Feature8TextBox.Name = "Feature8TextBox";
             this.Feature8TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature8TextBox.TabIndex = 19;
+            this.Feature8TextBox.TabIndex = 15;
             // 
             // Feature7TextBox
             // 
@@ -681,7 +731,7 @@
             this.Feature7TextBox.MaxLength = 30;
             this.Feature7TextBox.Name = "Feature7TextBox";
             this.Feature7TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature7TextBox.TabIndex = 17;
+            this.Feature7TextBox.TabIndex = 13;
             // 
             // Feature10Label
             // 
@@ -689,7 +739,7 @@
             this.Feature10Label.Location = new System.Drawing.Point(6, 243);
             this.Feature10Label.Name = "Feature10Label";
             this.Feature10Label.Size = new System.Drawing.Size(61, 13);
-            this.Feature10Label.TabIndex = 22;
+            this.Feature10Label.TabIndex = 18;
             this.Feature10Label.Text = "Feature 10:";
             // 
             // Feature9Label
@@ -698,7 +748,7 @@
             this.Feature9Label.Location = new System.Drawing.Point(6, 217);
             this.Feature9Label.Name = "Feature9Label";
             this.Feature9Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature9Label.TabIndex = 20;
+            this.Feature9Label.TabIndex = 16;
             this.Feature9Label.Text = "Feature 9:";
             // 
             // Feature10TextBox
@@ -707,7 +757,7 @@
             this.Feature10TextBox.MaxLength = 30;
             this.Feature10TextBox.Name = "Feature10TextBox";
             this.Feature10TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature10TextBox.TabIndex = 23;
+            this.Feature10TextBox.TabIndex = 19;
             // 
             // Feature9TextBox
             // 
@@ -715,7 +765,7 @@
             this.Feature9TextBox.MaxLength = 30;
             this.Feature9TextBox.Name = "Feature9TextBox";
             this.Feature9TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature9TextBox.TabIndex = 21;
+            this.Feature9TextBox.TabIndex = 17;
             // 
             // Feature1Label
             // 
@@ -740,7 +790,7 @@
             this.Feature3Label.Location = new System.Drawing.Point(6, 61);
             this.Feature3Label.Name = "Feature3Label";
             this.Feature3Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature3Label.TabIndex = 6;
+            this.Feature3Label.TabIndex = 4;
             this.Feature3Label.Text = "Feature 3:";
             // 
             // Feature2Label
@@ -749,7 +799,7 @@
             this.Feature2Label.Location = new System.Drawing.Point(6, 35);
             this.Feature2Label.Name = "Feature2Label";
             this.Feature2Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature2Label.TabIndex = 3;
+            this.Feature2Label.TabIndex = 2;
             this.Feature2Label.Text = "Feature 2:";
             // 
             // Feature3TextBox
@@ -758,7 +808,7 @@
             this.Feature3TextBox.MaxLength = 30;
             this.Feature3TextBox.Name = "Feature3TextBox";
             this.Feature3TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature3TextBox.TabIndex = 7;
+            this.Feature3TextBox.TabIndex = 5;
             // 
             // Feature2TextBox
             // 
@@ -766,7 +816,7 @@
             this.Feature2TextBox.MaxLength = 30;
             this.Feature2TextBox.Name = "Feature2TextBox";
             this.Feature2TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature2TextBox.TabIndex = 4;
+            this.Feature2TextBox.TabIndex = 3;
             // 
             // Feature5Label
             // 
@@ -774,7 +824,7 @@
             this.Feature5Label.Location = new System.Drawing.Point(6, 113);
             this.Feature5Label.Name = "Feature5Label";
             this.Feature5Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature5Label.TabIndex = 12;
+            this.Feature5Label.TabIndex = 8;
             this.Feature5Label.Text = "Feature 5:";
             // 
             // Feature4Label
@@ -783,7 +833,7 @@
             this.Feature4Label.Location = new System.Drawing.Point(6, 87);
             this.Feature4Label.Name = "Feature4Label";
             this.Feature4Label.Size = new System.Drawing.Size(55, 13);
-            this.Feature4Label.TabIndex = 9;
+            this.Feature4Label.TabIndex = 6;
             this.Feature4Label.Text = "Feature 4:";
             // 
             // Feature5TextBox
@@ -792,7 +842,7 @@
             this.Feature5TextBox.MaxLength = 30;
             this.Feature5TextBox.Name = "Feature5TextBox";
             this.Feature5TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature5TextBox.TabIndex = 13;
+            this.Feature5TextBox.TabIndex = 9;
             // 
             // Feature4TextBox
             // 
@@ -800,7 +850,7 @@
             this.Feature4TextBox.MaxLength = 30;
             this.Feature4TextBox.Name = "Feature4TextBox";
             this.Feature4TextBox.Size = new System.Drawing.Size(200, 20);
-            this.Feature4TextBox.TabIndex = 10;
+            this.Feature4TextBox.TabIndex = 7;
             // 
             // ExcelColumnsTabPage
             // 
@@ -808,7 +858,7 @@
             this.ExcelColumnsTabPage.Location = new System.Drawing.Point(4, 22);
             this.ExcelColumnsTabPage.Name = "ExcelColumnsTabPage";
             this.ExcelColumnsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ExcelColumnsTabPage.Size = new System.Drawing.Size(653, 486);
+            this.ExcelColumnsTabPage.Size = new System.Drawing.Size(653, 534);
             this.ExcelColumnsTabPage.TabIndex = 2;
             this.ExcelColumnsTabPage.Text = "Excel Columns";
             this.ExcelColumnsTabPage.UseVisualStyleBackColor = true;
@@ -820,8 +870,8 @@
             this.ExcelTabControl.Location = new System.Drawing.Point(6, 6);
             this.ExcelTabControl.Name = "ExcelTabControl";
             this.ExcelTabControl.SelectedIndex = 0;
-            this.ExcelTabControl.Size = new System.Drawing.Size(636, 464);
-            this.ExcelTabControl.TabIndex = 10;
+            this.ExcelTabControl.Size = new System.Drawing.Size(636, 514);
+            this.ExcelTabControl.TabIndex = 0;
             // 
             // InvelosTabPage
             // 
@@ -829,7 +879,7 @@
             this.InvelosTabPage.Location = new System.Drawing.Point(4, 22);
             this.InvelosTabPage.Name = "InvelosTabPage";
             this.InvelosTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.InvelosTabPage.Size = new System.Drawing.Size(628, 438);
+            this.InvelosTabPage.Size = new System.Drawing.Size(628, 488);
             this.InvelosTabPage.TabIndex = 0;
             this.InvelosTabPage.Text = "Invelos Data";
             this.InvelosTabPage.UseVisualStyleBackColor = true;
@@ -1232,6 +1282,16 @@
             // 
             // PluginTabPage
             // 
+            this.PluginTabPage.Controls.Add(this.Feature40CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature39CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature38CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature37CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature36CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature35CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature34CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature33CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature32CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature31CheckBox);
             this.PluginTabPage.Controls.Add(this.Feature30CheckBox);
             this.PluginTabPage.Controls.Add(this.Feature29CheckBox);
             this.PluginTabPage.Controls.Add(this.Feature28CheckBox);
@@ -1265,7 +1325,7 @@
             this.PluginTabPage.Location = new System.Drawing.Point(4, 22);
             this.PluginTabPage.Name = "PluginTabPage";
             this.PluginTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.PluginTabPage.Size = new System.Drawing.Size(628, 438);
+            this.PluginTabPage.Size = new System.Drawing.Size(628, 488);
             this.PluginTabPage.TabIndex = 1;
             this.PluginTabPage.Text = "Plugin Data";
             this.PluginTabPage.UseVisualStyleBackColor = true;
@@ -1273,150 +1333,150 @@
             // Feature30CheckBox
             // 
             this.Feature30CheckBox.AutoSize = true;
-            this.Feature30CheckBox.Location = new System.Drawing.Point(294, 328);
+            this.Feature30CheckBox.Location = new System.Drawing.Point(295, 213);
             this.Feature30CheckBox.Name = "Feature30CheckBox";
             this.Feature30CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature30CheckBox.TabIndex = 89;
+            this.Feature30CheckBox.TabIndex = 29;
             this.Feature30CheckBox.Text = "Feature";
             this.Feature30CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature29CheckBox
             // 
             this.Feature29CheckBox.AutoSize = true;
-            this.Feature29CheckBox.Location = new System.Drawing.Point(294, 305);
+            this.Feature29CheckBox.Location = new System.Drawing.Point(295, 190);
             this.Feature29CheckBox.Name = "Feature29CheckBox";
             this.Feature29CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature29CheckBox.TabIndex = 88;
+            this.Feature29CheckBox.TabIndex = 28;
             this.Feature29CheckBox.Text = "Feature";
             this.Feature29CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature28CheckBox
             // 
             this.Feature28CheckBox.AutoSize = true;
-            this.Feature28CheckBox.Location = new System.Drawing.Point(294, 282);
+            this.Feature28CheckBox.Location = new System.Drawing.Point(295, 167);
             this.Feature28CheckBox.Name = "Feature28CheckBox";
             this.Feature28CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature28CheckBox.TabIndex = 87;
+            this.Feature28CheckBox.TabIndex = 27;
             this.Feature28CheckBox.Text = "Feature";
             this.Feature28CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature27CheckBox
             // 
             this.Feature27CheckBox.AutoSize = true;
-            this.Feature27CheckBox.Location = new System.Drawing.Point(294, 259);
+            this.Feature27CheckBox.Location = new System.Drawing.Point(295, 144);
             this.Feature27CheckBox.Name = "Feature27CheckBox";
             this.Feature27CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature27CheckBox.TabIndex = 86;
+            this.Feature27CheckBox.TabIndex = 26;
             this.Feature27CheckBox.Text = "Feature";
             this.Feature27CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature26CheckBox
             // 
             this.Feature26CheckBox.AutoSize = true;
-            this.Feature26CheckBox.Location = new System.Drawing.Point(294, 236);
+            this.Feature26CheckBox.Location = new System.Drawing.Point(295, 121);
             this.Feature26CheckBox.Name = "Feature26CheckBox";
             this.Feature26CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature26CheckBox.TabIndex = 85;
+            this.Feature26CheckBox.TabIndex = 25;
             this.Feature26CheckBox.Text = "Feature";
             this.Feature26CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature25CheckBox
             // 
             this.Feature25CheckBox.AutoSize = true;
-            this.Feature25CheckBox.Location = new System.Drawing.Point(294, 213);
+            this.Feature25CheckBox.Location = new System.Drawing.Point(295, 98);
             this.Feature25CheckBox.Name = "Feature25CheckBox";
             this.Feature25CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature25CheckBox.TabIndex = 84;
+            this.Feature25CheckBox.TabIndex = 24;
             this.Feature25CheckBox.Text = "Feature";
             this.Feature25CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature24CheckBox
             // 
             this.Feature24CheckBox.AutoSize = true;
-            this.Feature24CheckBox.Location = new System.Drawing.Point(294, 190);
+            this.Feature24CheckBox.Location = new System.Drawing.Point(295, 75);
             this.Feature24CheckBox.Name = "Feature24CheckBox";
             this.Feature24CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature24CheckBox.TabIndex = 83;
+            this.Feature24CheckBox.TabIndex = 23;
             this.Feature24CheckBox.Text = "Feature";
             this.Feature24CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature23CheckBox
             // 
             this.Feature23CheckBox.AutoSize = true;
-            this.Feature23CheckBox.Location = new System.Drawing.Point(294, 167);
+            this.Feature23CheckBox.Location = new System.Drawing.Point(295, 52);
             this.Feature23CheckBox.Name = "Feature23CheckBox";
             this.Feature23CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature23CheckBox.TabIndex = 82;
+            this.Feature23CheckBox.TabIndex = 22;
             this.Feature23CheckBox.Text = "Feature";
             this.Feature23CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature22CheckBox
             // 
             this.Feature22CheckBox.AutoSize = true;
-            this.Feature22CheckBox.Location = new System.Drawing.Point(294, 144);
+            this.Feature22CheckBox.Location = new System.Drawing.Point(295, 29);
             this.Feature22CheckBox.Name = "Feature22CheckBox";
             this.Feature22CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature22CheckBox.TabIndex = 81;
+            this.Feature22CheckBox.TabIndex = 21;
             this.Feature22CheckBox.Text = "Feature";
             this.Feature22CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature21CheckBox
             // 
             this.Feature21CheckBox.AutoSize = true;
-            this.Feature21CheckBox.Location = new System.Drawing.Point(294, 121);
+            this.Feature21CheckBox.Location = new System.Drawing.Point(295, 6);
             this.Feature21CheckBox.Name = "Feature21CheckBox";
             this.Feature21CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature21CheckBox.TabIndex = 80;
+            this.Feature21CheckBox.TabIndex = 20;
             this.Feature21CheckBox.Text = "Feature";
             this.Feature21CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature20CheckBox
             // 
             this.Feature20CheckBox.AutoSize = true;
-            this.Feature20CheckBox.Location = new System.Drawing.Point(294, 98);
+            this.Feature20CheckBox.Location = new System.Drawing.Point(6, 443);
             this.Feature20CheckBox.Name = "Feature20CheckBox";
             this.Feature20CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature20CheckBox.TabIndex = 79;
+            this.Feature20CheckBox.TabIndex = 19;
             this.Feature20CheckBox.Text = "Feature";
             this.Feature20CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature19CheckBox
             // 
             this.Feature19CheckBox.AutoSize = true;
-            this.Feature19CheckBox.Location = new System.Drawing.Point(294, 75);
+            this.Feature19CheckBox.Location = new System.Drawing.Point(6, 420);
             this.Feature19CheckBox.Name = "Feature19CheckBox";
             this.Feature19CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature19CheckBox.TabIndex = 78;
+            this.Feature19CheckBox.TabIndex = 18;
             this.Feature19CheckBox.Text = "Feature";
             this.Feature19CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature18CheckBox
             // 
             this.Feature18CheckBox.AutoSize = true;
-            this.Feature18CheckBox.Location = new System.Drawing.Point(294, 52);
+            this.Feature18CheckBox.Location = new System.Drawing.Point(6, 397);
             this.Feature18CheckBox.Name = "Feature18CheckBox";
             this.Feature18CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature18CheckBox.TabIndex = 77;
+            this.Feature18CheckBox.TabIndex = 17;
             this.Feature18CheckBox.Text = "Feature";
             this.Feature18CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature17CheckBox
             // 
             this.Feature17CheckBox.AutoSize = true;
-            this.Feature17CheckBox.Location = new System.Drawing.Point(294, 29);
+            this.Feature17CheckBox.Location = new System.Drawing.Point(6, 374);
             this.Feature17CheckBox.Name = "Feature17CheckBox";
             this.Feature17CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature17CheckBox.TabIndex = 76;
+            this.Feature17CheckBox.TabIndex = 16;
             this.Feature17CheckBox.Text = "Feature";
             this.Feature17CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature16CheckBox
             // 
             this.Feature16CheckBox.AutoSize = true;
-            this.Feature16CheckBox.Location = new System.Drawing.Point(294, 6);
+            this.Feature16CheckBox.Location = new System.Drawing.Point(6, 351);
             this.Feature16CheckBox.Name = "Feature16CheckBox";
             this.Feature16CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature16CheckBox.TabIndex = 75;
+            this.Feature16CheckBox.TabIndex = 15;
             this.Feature16CheckBox.Text = "Feature";
             this.Feature16CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1426,7 +1486,7 @@
             this.Feature15CheckBox.Location = new System.Drawing.Point(6, 328);
             this.Feature15CheckBox.Name = "Feature15CheckBox";
             this.Feature15CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature15CheckBox.TabIndex = 74;
+            this.Feature15CheckBox.TabIndex = 14;
             this.Feature15CheckBox.Text = "Feature";
             this.Feature15CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1436,7 +1496,7 @@
             this.Feature14CheckBox.Location = new System.Drawing.Point(6, 305);
             this.Feature14CheckBox.Name = "Feature14CheckBox";
             this.Feature14CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature14CheckBox.TabIndex = 73;
+            this.Feature14CheckBox.TabIndex = 13;
             this.Feature14CheckBox.Text = "Feature";
             this.Feature14CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1446,7 +1506,7 @@
             this.Feature13CheckBox.Location = new System.Drawing.Point(6, 282);
             this.Feature13CheckBox.Name = "Feature13CheckBox";
             this.Feature13CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature13CheckBox.TabIndex = 72;
+            this.Feature13CheckBox.TabIndex = 12;
             this.Feature13CheckBox.Text = "Feature";
             this.Feature13CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1456,7 +1516,7 @@
             this.Feature12CheckBox.Location = new System.Drawing.Point(6, 259);
             this.Feature12CheckBox.Name = "Feature12CheckBox";
             this.Feature12CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature12CheckBox.TabIndex = 71;
+            this.Feature12CheckBox.TabIndex = 11;
             this.Feature12CheckBox.Text = "Feature";
             this.Feature12CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1466,7 +1526,7 @@
             this.Feature11CheckBox.Location = new System.Drawing.Point(6, 236);
             this.Feature11CheckBox.Name = "Feature11CheckBox";
             this.Feature11CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature11CheckBox.TabIndex = 70;
+            this.Feature11CheckBox.TabIndex = 10;
             this.Feature11CheckBox.Text = "Feature";
             this.Feature11CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1476,7 +1536,7 @@
             this.Feature10CheckBox.Location = new System.Drawing.Point(6, 213);
             this.Feature10CheckBox.Name = "Feature10CheckBox";
             this.Feature10CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature10CheckBox.TabIndex = 69;
+            this.Feature10CheckBox.TabIndex = 9;
             this.Feature10CheckBox.Text = "Feature";
             this.Feature10CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1486,7 +1546,7 @@
             this.Feature9CheckBox.Location = new System.Drawing.Point(6, 190);
             this.Feature9CheckBox.Name = "Feature9CheckBox";
             this.Feature9CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature9CheckBox.TabIndex = 68;
+            this.Feature9CheckBox.TabIndex = 8;
             this.Feature9CheckBox.Text = "Feature";
             this.Feature9CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1496,7 +1556,7 @@
             this.Feature8CheckBox.Location = new System.Drawing.Point(6, 167);
             this.Feature8CheckBox.Name = "Feature8CheckBox";
             this.Feature8CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature8CheckBox.TabIndex = 67;
+            this.Feature8CheckBox.TabIndex = 7;
             this.Feature8CheckBox.Text = "Feature";
             this.Feature8CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1506,7 +1566,7 @@
             this.Feature7CheckBox.Location = new System.Drawing.Point(6, 144);
             this.Feature7CheckBox.Name = "Feature7CheckBox";
             this.Feature7CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature7CheckBox.TabIndex = 66;
+            this.Feature7CheckBox.TabIndex = 6;
             this.Feature7CheckBox.Text = "Feature";
             this.Feature7CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1516,7 +1576,7 @@
             this.Feature6CheckBox.Location = new System.Drawing.Point(6, 121);
             this.Feature6CheckBox.Name = "Feature6CheckBox";
             this.Feature6CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature6CheckBox.TabIndex = 65;
+            this.Feature6CheckBox.TabIndex = 5;
             this.Feature6CheckBox.Text = "Feature";
             this.Feature6CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1526,7 +1586,7 @@
             this.Feature5CheckBox.Location = new System.Drawing.Point(6, 98);
             this.Feature5CheckBox.Name = "Feature5CheckBox";
             this.Feature5CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature5CheckBox.TabIndex = 64;
+            this.Feature5CheckBox.TabIndex = 4;
             this.Feature5CheckBox.Text = "Feature";
             this.Feature5CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1536,7 +1596,7 @@
             this.Feature4CheckBox.Location = new System.Drawing.Point(6, 75);
             this.Feature4CheckBox.Name = "Feature4CheckBox";
             this.Feature4CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature4CheckBox.TabIndex = 63;
+            this.Feature4CheckBox.TabIndex = 3;
             this.Feature4CheckBox.Text = "Feature";
             this.Feature4CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1546,7 +1606,7 @@
             this.Feature3CheckBox.Location = new System.Drawing.Point(6, 52);
             this.Feature3CheckBox.Name = "Feature3CheckBox";
             this.Feature3CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature3CheckBox.TabIndex = 62;
+            this.Feature3CheckBox.TabIndex = 2;
             this.Feature3CheckBox.Text = "Feature";
             this.Feature3CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1556,7 +1616,7 @@
             this.Feature2CheckBox.Location = new System.Drawing.Point(6, 29);
             this.Feature2CheckBox.Name = "Feature2CheckBox";
             this.Feature2CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature2CheckBox.TabIndex = 61;
+            this.Feature2CheckBox.TabIndex = 1;
             this.Feature2CheckBox.Text = "Feature";
             this.Feature2CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1566,7 +1626,7 @@
             this.Feature1CheckBox.Location = new System.Drawing.Point(6, 6);
             this.Feature1CheckBox.Name = "Feature1CheckBox";
             this.Feature1CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature1CheckBox.TabIndex = 60;
+            this.Feature1CheckBox.TabIndex = 0;
             this.Feature1CheckBox.Text = "Feature";
             this.Feature1CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -1581,7 +1641,7 @@
             this.MiscTabPage.Location = new System.Drawing.Point(4, 22);
             this.MiscTabPage.Name = "MiscTabPage";
             this.MiscTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.MiscTabPage.Size = new System.Drawing.Size(653, 486);
+            this.MiscTabPage.Size = new System.Drawing.Size(653, 534);
             this.MiscTabPage.TabIndex = 1;
             this.MiscTabPage.Text = "Misc.";
             this.MiscTabPage.UseVisualStyleBackColor = true;
@@ -1643,20 +1703,290 @@
             this.UiLanguageLabel.TabIndex = 7;
             this.UiLanguageLabel.Text = "UI Language";
             // 
+            // Feature36Label
+            // 
+            this.Feature36Label.AutoSize = true;
+            this.Feature36Label.Location = new System.Drawing.Point(328, 399);
+            this.Feature36Label.Name = "Feature36Label";
+            this.Feature36Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature36Label.TabIndex = 70;
+            this.Feature36Label.Text = "Feature 36:";
+            // 
+            // Feature36TextBox
+            // 
+            this.Feature36TextBox.Location = new System.Drawing.Point(394, 396);
+            this.Feature36TextBox.MaxLength = 30;
+            this.Feature36TextBox.Name = "Feature36TextBox";
+            this.Feature36TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature36TextBox.TabIndex = 71;
+            // 
+            // Feature38Label
+            // 
+            this.Feature38Label.AutoSize = true;
+            this.Feature38Label.Location = new System.Drawing.Point(328, 451);
+            this.Feature38Label.Name = "Feature38Label";
+            this.Feature38Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature38Label.TabIndex = 74;
+            this.Feature38Label.Text = "Feature 38:";
+            // 
+            // Feature37Label
+            // 
+            this.Feature37Label.AutoSize = true;
+            this.Feature37Label.Location = new System.Drawing.Point(328, 425);
+            this.Feature37Label.Name = "Feature37Label";
+            this.Feature37Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature37Label.TabIndex = 72;
+            this.Feature37Label.Text = "Feature 37:";
+            // 
+            // Feature38TextBox
+            // 
+            this.Feature38TextBox.Location = new System.Drawing.Point(394, 448);
+            this.Feature38TextBox.MaxLength = 30;
+            this.Feature38TextBox.Name = "Feature38TextBox";
+            this.Feature38TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature38TextBox.TabIndex = 75;
+            // 
+            // Feature37TextBox
+            // 
+            this.Feature37TextBox.Location = new System.Drawing.Point(394, 422);
+            this.Feature37TextBox.MaxLength = 30;
+            this.Feature37TextBox.Name = "Feature37TextBox";
+            this.Feature37TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature37TextBox.TabIndex = 73;
+            // 
+            // Feature40Label
+            // 
+            this.Feature40Label.AutoSize = true;
+            this.Feature40Label.Location = new System.Drawing.Point(328, 503);
+            this.Feature40Label.Name = "Feature40Label";
+            this.Feature40Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature40Label.TabIndex = 78;
+            this.Feature40Label.Text = "Feature 40:";
+            // 
+            // Feature39Label
+            // 
+            this.Feature39Label.AutoSize = true;
+            this.Feature39Label.Location = new System.Drawing.Point(328, 477);
+            this.Feature39Label.Name = "Feature39Label";
+            this.Feature39Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature39Label.TabIndex = 76;
+            this.Feature39Label.Text = "Feature 39:";
+            // 
+            // Feature40TextBox
+            // 
+            this.Feature40TextBox.Location = new System.Drawing.Point(394, 500);
+            this.Feature40TextBox.MaxLength = 30;
+            this.Feature40TextBox.Name = "Feature40TextBox";
+            this.Feature40TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature40TextBox.TabIndex = 79;
+            // 
+            // Feature39TextBox
+            // 
+            this.Feature39TextBox.Location = new System.Drawing.Point(394, 474);
+            this.Feature39TextBox.MaxLength = 30;
+            this.Feature39TextBox.Name = "Feature39TextBox";
+            this.Feature39TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature39TextBox.TabIndex = 77;
+            // 
+            // Feature31Label
+            // 
+            this.Feature31Label.AutoSize = true;
+            this.Feature31Label.Location = new System.Drawing.Point(328, 269);
+            this.Feature31Label.Name = "Feature31Label";
+            this.Feature31Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature31Label.TabIndex = 60;
+            this.Feature31Label.Text = "Feature 31:";
+            // 
+            // Feature31TextBox
+            // 
+            this.Feature31TextBox.Location = new System.Drawing.Point(394, 266);
+            this.Feature31TextBox.MaxLength = 30;
+            this.Feature31TextBox.Name = "Feature31TextBox";
+            this.Feature31TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature31TextBox.TabIndex = 61;
+            // 
+            // Feature33Label
+            // 
+            this.Feature33Label.AutoSize = true;
+            this.Feature33Label.Location = new System.Drawing.Point(328, 321);
+            this.Feature33Label.Name = "Feature33Label";
+            this.Feature33Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature33Label.TabIndex = 64;
+            this.Feature33Label.Text = "Feature 33:";
+            // 
+            // Feature32Label
+            // 
+            this.Feature32Label.AutoSize = true;
+            this.Feature32Label.Location = new System.Drawing.Point(328, 295);
+            this.Feature32Label.Name = "Feature32Label";
+            this.Feature32Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature32Label.TabIndex = 62;
+            this.Feature32Label.Text = "Feature 32:";
+            // 
+            // Feature33TextBox
+            // 
+            this.Feature33TextBox.Location = new System.Drawing.Point(394, 318);
+            this.Feature33TextBox.MaxLength = 30;
+            this.Feature33TextBox.Name = "Feature33TextBox";
+            this.Feature33TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature33TextBox.TabIndex = 65;
+            // 
+            // Feature32TextBox
+            // 
+            this.Feature32TextBox.Location = new System.Drawing.Point(394, 292);
+            this.Feature32TextBox.MaxLength = 30;
+            this.Feature32TextBox.Name = "Feature32TextBox";
+            this.Feature32TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature32TextBox.TabIndex = 63;
+            // 
+            // Feature35Label
+            // 
+            this.Feature35Label.AutoSize = true;
+            this.Feature35Label.Location = new System.Drawing.Point(328, 373);
+            this.Feature35Label.Name = "Feature35Label";
+            this.Feature35Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature35Label.TabIndex = 68;
+            this.Feature35Label.Text = "Feature 35:";
+            // 
+            // Feature34Label
+            // 
+            this.Feature34Label.AutoSize = true;
+            this.Feature34Label.Location = new System.Drawing.Point(328, 347);
+            this.Feature34Label.Name = "Feature34Label";
+            this.Feature34Label.Size = new System.Drawing.Size(61, 13);
+            this.Feature34Label.TabIndex = 66;
+            this.Feature34Label.Text = "Feature 34:";
+            // 
+            // Feature35TextBox
+            // 
+            this.Feature35TextBox.Location = new System.Drawing.Point(394, 370);
+            this.Feature35TextBox.MaxLength = 30;
+            this.Feature35TextBox.Name = "Feature35TextBox";
+            this.Feature35TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature35TextBox.TabIndex = 69;
+            // 
+            // Feature34TextBox
+            // 
+            this.Feature34TextBox.Location = new System.Drawing.Point(394, 344);
+            this.Feature34TextBox.MaxLength = 30;
+            this.Feature34TextBox.Name = "Feature34TextBox";
+            this.Feature34TextBox.Size = new System.Drawing.Size(200, 20);
+            this.Feature34TextBox.TabIndex = 67;
+            // 
+            // Feature40CheckBox
+            // 
+            this.Feature40CheckBox.AutoSize = true;
+            this.Feature40CheckBox.Location = new System.Drawing.Point(295, 443);
+            this.Feature40CheckBox.Name = "Feature40CheckBox";
+            this.Feature40CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature40CheckBox.TabIndex = 39;
+            this.Feature40CheckBox.Text = "Feature";
+            this.Feature40CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature39CheckBox
+            // 
+            this.Feature39CheckBox.AutoSize = true;
+            this.Feature39CheckBox.Location = new System.Drawing.Point(295, 420);
+            this.Feature39CheckBox.Name = "Feature39CheckBox";
+            this.Feature39CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature39CheckBox.TabIndex = 38;
+            this.Feature39CheckBox.Text = "Feature";
+            this.Feature39CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature38CheckBox
+            // 
+            this.Feature38CheckBox.AutoSize = true;
+            this.Feature38CheckBox.Location = new System.Drawing.Point(295, 397);
+            this.Feature38CheckBox.Name = "Feature38CheckBox";
+            this.Feature38CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature38CheckBox.TabIndex = 37;
+            this.Feature38CheckBox.Text = "Feature";
+            this.Feature38CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature37CheckBox
+            // 
+            this.Feature37CheckBox.AutoSize = true;
+            this.Feature37CheckBox.Location = new System.Drawing.Point(295, 374);
+            this.Feature37CheckBox.Name = "Feature37CheckBox";
+            this.Feature37CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature37CheckBox.TabIndex = 36;
+            this.Feature37CheckBox.Text = "Feature";
+            this.Feature37CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature36CheckBox
+            // 
+            this.Feature36CheckBox.AutoSize = true;
+            this.Feature36CheckBox.Location = new System.Drawing.Point(295, 351);
+            this.Feature36CheckBox.Name = "Feature36CheckBox";
+            this.Feature36CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature36CheckBox.TabIndex = 35;
+            this.Feature36CheckBox.Text = "Feature";
+            this.Feature36CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature35CheckBox
+            // 
+            this.Feature35CheckBox.AutoSize = true;
+            this.Feature35CheckBox.Location = new System.Drawing.Point(295, 328);
+            this.Feature35CheckBox.Name = "Feature35CheckBox";
+            this.Feature35CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature35CheckBox.TabIndex = 34;
+            this.Feature35CheckBox.Text = "Feature";
+            this.Feature35CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature34CheckBox
+            // 
+            this.Feature34CheckBox.AutoSize = true;
+            this.Feature34CheckBox.Location = new System.Drawing.Point(295, 305);
+            this.Feature34CheckBox.Name = "Feature34CheckBox";
+            this.Feature34CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature34CheckBox.TabIndex = 33;
+            this.Feature34CheckBox.Text = "Feature";
+            this.Feature34CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature33CheckBox
+            // 
+            this.Feature33CheckBox.AutoSize = true;
+            this.Feature33CheckBox.Location = new System.Drawing.Point(295, 282);
+            this.Feature33CheckBox.Name = "Feature33CheckBox";
+            this.Feature33CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature33CheckBox.TabIndex = 32;
+            this.Feature33CheckBox.Text = "Feature";
+            this.Feature33CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature32CheckBox
+            // 
+            this.Feature32CheckBox.AutoSize = true;
+            this.Feature32CheckBox.Location = new System.Drawing.Point(295, 259);
+            this.Feature32CheckBox.Name = "Feature32CheckBox";
+            this.Feature32CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature32CheckBox.TabIndex = 31;
+            this.Feature32CheckBox.Text = "Feature";
+            this.Feature32CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature31CheckBox
+            // 
+            this.Feature31CheckBox.AutoSize = true;
+            this.Feature31CheckBox.Location = new System.Drawing.Point(295, 236);
+            this.Feature31CheckBox.Name = "Feature31CheckBox";
+            this.Feature31CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature31CheckBox.TabIndex = 30;
+            this.Feature31CheckBox.Text = "Feature";
+            this.Feature31CheckBox.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             this.AcceptButton = this.SaveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.DiscardButton;
-            this.ClientSize = new System.Drawing.Size(684, 561);
+            this.ClientSize = new System.Drawing.Size(684, 611);
             this.Controls.Add(this.MainTabControl);
             this.Controls.Add(this.DiscardButton);
             this.Controls.Add(this.SaveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(700, 600);
-            this.MinimumSize = new System.Drawing.Size(700, 600);
+            this.MaximumSize = new System.Drawing.Size(700, 650);
+            this.MinimumSize = new System.Drawing.Size(700, 650);
             this.Name = "SettingsForm";
             this.Text = "Options";
             this.MainTabControl.ResumeLayout(false);
@@ -1834,5 +2164,35 @@
         private System.Windows.Forms.Label FilterCountLabel;
         private System.Windows.Forms.NumericUpDown FilterCountUpDown;
         private System.Windows.Forms.Label ExportToCollectionXmlLabel;
+        private System.Windows.Forms.Label Feature36Label;
+        private System.Windows.Forms.TextBox Feature36TextBox;
+        private System.Windows.Forms.Label Feature38Label;
+        private System.Windows.Forms.Label Feature37Label;
+        private System.Windows.Forms.TextBox Feature38TextBox;
+        private System.Windows.Forms.TextBox Feature37TextBox;
+        private System.Windows.Forms.Label Feature40Label;
+        private System.Windows.Forms.Label Feature39Label;
+        private System.Windows.Forms.TextBox Feature40TextBox;
+        private System.Windows.Forms.TextBox Feature39TextBox;
+        private System.Windows.Forms.Label Feature31Label;
+        private System.Windows.Forms.TextBox Feature31TextBox;
+        private System.Windows.Forms.Label Feature33Label;
+        private System.Windows.Forms.Label Feature32Label;
+        private System.Windows.Forms.TextBox Feature33TextBox;
+        private System.Windows.Forms.TextBox Feature32TextBox;
+        private System.Windows.Forms.Label Feature35Label;
+        private System.Windows.Forms.Label Feature34Label;
+        private System.Windows.Forms.TextBox Feature35TextBox;
+        private System.Windows.Forms.TextBox Feature34TextBox;
+        private System.Windows.Forms.CheckBox Feature40CheckBox;
+        private System.Windows.Forms.CheckBox Feature39CheckBox;
+        private System.Windows.Forms.CheckBox Feature38CheckBox;
+        private System.Windows.Forms.CheckBox Feature37CheckBox;
+        private System.Windows.Forms.CheckBox Feature36CheckBox;
+        private System.Windows.Forms.CheckBox Feature35CheckBox;
+        private System.Windows.Forms.CheckBox Feature34CheckBox;
+        private System.Windows.Forms.CheckBox Feature33CheckBox;
+        private System.Windows.Forms.CheckBox Feature32CheckBox;
+        private System.Windows.Forms.CheckBox Feature31CheckBox;
     }
 }

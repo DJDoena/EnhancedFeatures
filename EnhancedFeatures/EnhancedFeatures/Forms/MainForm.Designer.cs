@@ -107,6 +107,16 @@
             this.Feature3CheckBox = new System.Windows.Forms.CheckBox();
             this.Feature2CheckBox = new System.Windows.Forms.CheckBox();
             this.Feature1CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature40CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature39CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature38CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature37CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature36CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature35CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature34CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature33CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature32CheckBox = new System.Windows.Forms.CheckBox();
+            this.Feature31CheckBox = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.InvelosTabPage.SuspendLayout();
@@ -121,10 +131,10 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(446, 447);
+            this.SaveButton.Location = new System.Drawing.Point(446, 526);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(85, 23);
-            this.SaveButton.TabIndex = 30;
+            this.SaveButton.TabIndex = 1;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.OnSaveButtonClick);
@@ -132,10 +142,10 @@
             // DiscardButton
             // 
             this.DiscardButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.DiscardButton.Location = new System.Drawing.Point(537, 447);
+            this.DiscardButton.Location = new System.Drawing.Point(537, 526);
             this.DiscardButton.Name = "DiscardButton";
             this.DiscardButton.Size = new System.Drawing.Size(75, 23);
-            this.DiscardButton.TabIndex = 31;
+            this.DiscardButton.TabIndex = 2;
             this.DiscardButton.Text = "Cancel";
             this.DiscardButton.UseVisualStyleBackColor = true;
             this.DiscardButton.Click += new System.EventHandler(this.OnDiscardButtonClick);
@@ -149,7 +159,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(634, 24);
-            this.menuStrip1.TabIndex = 32;
+            this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // EditToolStripMenuItem
@@ -184,7 +194,7 @@
             this.ExportOptionsToolStripMenuItem,
             this.ImportOptionsToolStripMenuItem});
             this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.ToolsToolStripMenuItem.Text = "&Tools";
             // 
             // OptionsToolStripMenuItem
@@ -252,8 +262,8 @@
             this.TabControl.Location = new System.Drawing.Point(12, 27);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(600, 414);
-            this.TabControl.TabIndex = 33;
+            this.TabControl.Size = new System.Drawing.Size(600, 493);
+            this.TabControl.TabIndex = 0;
             // 
             // InvelosTabPage
             // 
@@ -266,7 +276,7 @@
             this.InvelosTabPage.Location = new System.Drawing.Point(4, 22);
             this.InvelosTabPage.Name = "InvelosTabPage";
             this.InvelosTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.InvelosTabPage.Size = new System.Drawing.Size(592, 388);
+            this.InvelosTabPage.Size = new System.Drawing.Size(592, 467);
             this.InvelosTabPage.TabIndex = 0;
             this.InvelosTabPage.Text = "Invelos Data";
             this.InvelosTabPage.UseVisualStyleBackColor = true;
@@ -613,6 +623,16 @@
             // 
             // PluginTabPage
             // 
+            this.PluginTabPage.Controls.Add(this.Feature40CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature39CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature38CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature37CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature36CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature35CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature34CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature33CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature32CheckBox);
+            this.PluginTabPage.Controls.Add(this.Feature31CheckBox);
             this.PluginTabPage.Controls.Add(this.Feature30CheckBox);
             this.PluginTabPage.Controls.Add(this.Feature29CheckBox);
             this.PluginTabPage.Controls.Add(this.Feature28CheckBox);
@@ -646,7 +666,7 @@
             this.PluginTabPage.Location = new System.Drawing.Point(4, 22);
             this.PluginTabPage.Name = "PluginTabPage";
             this.PluginTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.PluginTabPage.Size = new System.Drawing.Size(592, 388);
+            this.PluginTabPage.Size = new System.Drawing.Size(592, 467);
             this.PluginTabPage.TabIndex = 1;
             this.PluginTabPage.Text = "Plugin Data";
             this.PluginTabPage.UseVisualStyleBackColor = true;
@@ -654,150 +674,150 @@
             // Feature30CheckBox
             // 
             this.Feature30CheckBox.AutoSize = true;
-            this.Feature30CheckBox.Location = new System.Drawing.Point(294, 328);
+            this.Feature30CheckBox.Location = new System.Drawing.Point(295, 213);
             this.Feature30CheckBox.Name = "Feature30CheckBox";
             this.Feature30CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature30CheckBox.TabIndex = 59;
+            this.Feature30CheckBox.TabIndex = 29;
             this.Feature30CheckBox.Text = "Feature";
             this.Feature30CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature29CheckBox
             // 
             this.Feature29CheckBox.AutoSize = true;
-            this.Feature29CheckBox.Location = new System.Drawing.Point(294, 305);
+            this.Feature29CheckBox.Location = new System.Drawing.Point(295, 190);
             this.Feature29CheckBox.Name = "Feature29CheckBox";
             this.Feature29CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature29CheckBox.TabIndex = 58;
+            this.Feature29CheckBox.TabIndex = 28;
             this.Feature29CheckBox.Text = "Feature";
             this.Feature29CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature28CheckBox
             // 
             this.Feature28CheckBox.AutoSize = true;
-            this.Feature28CheckBox.Location = new System.Drawing.Point(294, 282);
+            this.Feature28CheckBox.Location = new System.Drawing.Point(295, 167);
             this.Feature28CheckBox.Name = "Feature28CheckBox";
             this.Feature28CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature28CheckBox.TabIndex = 57;
+            this.Feature28CheckBox.TabIndex = 27;
             this.Feature28CheckBox.Text = "Feature";
             this.Feature28CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature27CheckBox
             // 
             this.Feature27CheckBox.AutoSize = true;
-            this.Feature27CheckBox.Location = new System.Drawing.Point(294, 259);
+            this.Feature27CheckBox.Location = new System.Drawing.Point(295, 144);
             this.Feature27CheckBox.Name = "Feature27CheckBox";
             this.Feature27CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature27CheckBox.TabIndex = 56;
+            this.Feature27CheckBox.TabIndex = 26;
             this.Feature27CheckBox.Text = "Feature";
             this.Feature27CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature26CheckBox
             // 
             this.Feature26CheckBox.AutoSize = true;
-            this.Feature26CheckBox.Location = new System.Drawing.Point(294, 236);
+            this.Feature26CheckBox.Location = new System.Drawing.Point(295, 121);
             this.Feature26CheckBox.Name = "Feature26CheckBox";
             this.Feature26CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature26CheckBox.TabIndex = 55;
+            this.Feature26CheckBox.TabIndex = 25;
             this.Feature26CheckBox.Text = "Feature";
             this.Feature26CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature25CheckBox
             // 
             this.Feature25CheckBox.AutoSize = true;
-            this.Feature25CheckBox.Location = new System.Drawing.Point(294, 213);
+            this.Feature25CheckBox.Location = new System.Drawing.Point(295, 98);
             this.Feature25CheckBox.Name = "Feature25CheckBox";
             this.Feature25CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature25CheckBox.TabIndex = 54;
+            this.Feature25CheckBox.TabIndex = 24;
             this.Feature25CheckBox.Text = "Feature";
             this.Feature25CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature24CheckBox
             // 
             this.Feature24CheckBox.AutoSize = true;
-            this.Feature24CheckBox.Location = new System.Drawing.Point(294, 190);
+            this.Feature24CheckBox.Location = new System.Drawing.Point(295, 75);
             this.Feature24CheckBox.Name = "Feature24CheckBox";
             this.Feature24CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature24CheckBox.TabIndex = 53;
+            this.Feature24CheckBox.TabIndex = 23;
             this.Feature24CheckBox.Text = "Feature";
             this.Feature24CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature23CheckBox
             // 
             this.Feature23CheckBox.AutoSize = true;
-            this.Feature23CheckBox.Location = new System.Drawing.Point(294, 167);
+            this.Feature23CheckBox.Location = new System.Drawing.Point(295, 52);
             this.Feature23CheckBox.Name = "Feature23CheckBox";
             this.Feature23CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature23CheckBox.TabIndex = 52;
+            this.Feature23CheckBox.TabIndex = 22;
             this.Feature23CheckBox.Text = "Feature";
             this.Feature23CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature22CheckBox
             // 
             this.Feature22CheckBox.AutoSize = true;
-            this.Feature22CheckBox.Location = new System.Drawing.Point(294, 144);
+            this.Feature22CheckBox.Location = new System.Drawing.Point(295, 29);
             this.Feature22CheckBox.Name = "Feature22CheckBox";
             this.Feature22CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature22CheckBox.TabIndex = 51;
+            this.Feature22CheckBox.TabIndex = 21;
             this.Feature22CheckBox.Text = "Feature";
             this.Feature22CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature21CheckBox
             // 
             this.Feature21CheckBox.AutoSize = true;
-            this.Feature21CheckBox.Location = new System.Drawing.Point(294, 121);
+            this.Feature21CheckBox.Location = new System.Drawing.Point(295, 6);
             this.Feature21CheckBox.Name = "Feature21CheckBox";
             this.Feature21CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature21CheckBox.TabIndex = 50;
+            this.Feature21CheckBox.TabIndex = 20;
             this.Feature21CheckBox.Text = "Feature";
             this.Feature21CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature20CheckBox
             // 
             this.Feature20CheckBox.AutoSize = true;
-            this.Feature20CheckBox.Location = new System.Drawing.Point(294, 98);
+            this.Feature20CheckBox.Location = new System.Drawing.Point(6, 443);
             this.Feature20CheckBox.Name = "Feature20CheckBox";
             this.Feature20CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature20CheckBox.TabIndex = 49;
+            this.Feature20CheckBox.TabIndex = 19;
             this.Feature20CheckBox.Text = "Feature";
             this.Feature20CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature19CheckBox
             // 
             this.Feature19CheckBox.AutoSize = true;
-            this.Feature19CheckBox.Location = new System.Drawing.Point(294, 75);
+            this.Feature19CheckBox.Location = new System.Drawing.Point(6, 420);
             this.Feature19CheckBox.Name = "Feature19CheckBox";
             this.Feature19CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature19CheckBox.TabIndex = 48;
+            this.Feature19CheckBox.TabIndex = 18;
             this.Feature19CheckBox.Text = "Feature";
             this.Feature19CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature18CheckBox
             // 
             this.Feature18CheckBox.AutoSize = true;
-            this.Feature18CheckBox.Location = new System.Drawing.Point(294, 52);
+            this.Feature18CheckBox.Location = new System.Drawing.Point(6, 397);
             this.Feature18CheckBox.Name = "Feature18CheckBox";
             this.Feature18CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature18CheckBox.TabIndex = 47;
+            this.Feature18CheckBox.TabIndex = 17;
             this.Feature18CheckBox.Text = "Feature";
             this.Feature18CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature17CheckBox
             // 
             this.Feature17CheckBox.AutoSize = true;
-            this.Feature17CheckBox.Location = new System.Drawing.Point(294, 29);
+            this.Feature17CheckBox.Location = new System.Drawing.Point(6, 374);
             this.Feature17CheckBox.Name = "Feature17CheckBox";
             this.Feature17CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature17CheckBox.TabIndex = 46;
+            this.Feature17CheckBox.TabIndex = 16;
             this.Feature17CheckBox.Text = "Feature";
             this.Feature17CheckBox.UseVisualStyleBackColor = true;
             // 
             // Feature16CheckBox
             // 
             this.Feature16CheckBox.AutoSize = true;
-            this.Feature16CheckBox.Location = new System.Drawing.Point(294, 6);
+            this.Feature16CheckBox.Location = new System.Drawing.Point(6, 351);
             this.Feature16CheckBox.Name = "Feature16CheckBox";
             this.Feature16CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature16CheckBox.TabIndex = 45;
+            this.Feature16CheckBox.TabIndex = 15;
             this.Feature16CheckBox.Text = "Feature";
             this.Feature16CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -807,7 +827,7 @@
             this.Feature15CheckBox.Location = new System.Drawing.Point(6, 328);
             this.Feature15CheckBox.Name = "Feature15CheckBox";
             this.Feature15CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature15CheckBox.TabIndex = 44;
+            this.Feature15CheckBox.TabIndex = 14;
             this.Feature15CheckBox.Text = "Feature";
             this.Feature15CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -817,7 +837,7 @@
             this.Feature14CheckBox.Location = new System.Drawing.Point(6, 305);
             this.Feature14CheckBox.Name = "Feature14CheckBox";
             this.Feature14CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature14CheckBox.TabIndex = 43;
+            this.Feature14CheckBox.TabIndex = 13;
             this.Feature14CheckBox.Text = "Feature";
             this.Feature14CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -827,7 +847,7 @@
             this.Feature13CheckBox.Location = new System.Drawing.Point(6, 282);
             this.Feature13CheckBox.Name = "Feature13CheckBox";
             this.Feature13CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature13CheckBox.TabIndex = 42;
+            this.Feature13CheckBox.TabIndex = 12;
             this.Feature13CheckBox.Text = "Feature";
             this.Feature13CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -837,7 +857,7 @@
             this.Feature12CheckBox.Location = new System.Drawing.Point(6, 259);
             this.Feature12CheckBox.Name = "Feature12CheckBox";
             this.Feature12CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature12CheckBox.TabIndex = 41;
+            this.Feature12CheckBox.TabIndex = 11;
             this.Feature12CheckBox.Text = "Feature";
             this.Feature12CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -847,7 +867,7 @@
             this.Feature11CheckBox.Location = new System.Drawing.Point(6, 236);
             this.Feature11CheckBox.Name = "Feature11CheckBox";
             this.Feature11CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature11CheckBox.TabIndex = 40;
+            this.Feature11CheckBox.TabIndex = 10;
             this.Feature11CheckBox.Text = "Feature";
             this.Feature11CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -857,7 +877,7 @@
             this.Feature10CheckBox.Location = new System.Drawing.Point(6, 213);
             this.Feature10CheckBox.Name = "Feature10CheckBox";
             this.Feature10CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature10CheckBox.TabIndex = 39;
+            this.Feature10CheckBox.TabIndex = 9;
             this.Feature10CheckBox.Text = "Feature";
             this.Feature10CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -867,7 +887,7 @@
             this.Feature9CheckBox.Location = new System.Drawing.Point(6, 190);
             this.Feature9CheckBox.Name = "Feature9CheckBox";
             this.Feature9CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature9CheckBox.TabIndex = 38;
+            this.Feature9CheckBox.TabIndex = 8;
             this.Feature9CheckBox.Text = "Feature";
             this.Feature9CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -877,7 +897,7 @@
             this.Feature8CheckBox.Location = new System.Drawing.Point(6, 167);
             this.Feature8CheckBox.Name = "Feature8CheckBox";
             this.Feature8CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature8CheckBox.TabIndex = 37;
+            this.Feature8CheckBox.TabIndex = 7;
             this.Feature8CheckBox.Text = "Feature";
             this.Feature8CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -887,7 +907,7 @@
             this.Feature7CheckBox.Location = new System.Drawing.Point(6, 144);
             this.Feature7CheckBox.Name = "Feature7CheckBox";
             this.Feature7CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature7CheckBox.TabIndex = 36;
+            this.Feature7CheckBox.TabIndex = 6;
             this.Feature7CheckBox.Text = "Feature";
             this.Feature7CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -897,7 +917,7 @@
             this.Feature6CheckBox.Location = new System.Drawing.Point(6, 121);
             this.Feature6CheckBox.Name = "Feature6CheckBox";
             this.Feature6CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature6CheckBox.TabIndex = 35;
+            this.Feature6CheckBox.TabIndex = 5;
             this.Feature6CheckBox.Text = "Feature";
             this.Feature6CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -907,7 +927,7 @@
             this.Feature5CheckBox.Location = new System.Drawing.Point(6, 98);
             this.Feature5CheckBox.Name = "Feature5CheckBox";
             this.Feature5CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature5CheckBox.TabIndex = 34;
+            this.Feature5CheckBox.TabIndex = 4;
             this.Feature5CheckBox.Text = "Feature";
             this.Feature5CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -917,7 +937,7 @@
             this.Feature4CheckBox.Location = new System.Drawing.Point(6, 75);
             this.Feature4CheckBox.Name = "Feature4CheckBox";
             this.Feature4CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature4CheckBox.TabIndex = 33;
+            this.Feature4CheckBox.TabIndex = 3;
             this.Feature4CheckBox.Text = "Feature";
             this.Feature4CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -927,7 +947,7 @@
             this.Feature3CheckBox.Location = new System.Drawing.Point(6, 52);
             this.Feature3CheckBox.Name = "Feature3CheckBox";
             this.Feature3CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature3CheckBox.TabIndex = 32;
+            this.Feature3CheckBox.TabIndex = 2;
             this.Feature3CheckBox.Text = "Feature";
             this.Feature3CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -937,7 +957,7 @@
             this.Feature2CheckBox.Location = new System.Drawing.Point(6, 29);
             this.Feature2CheckBox.Name = "Feature2CheckBox";
             this.Feature2CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature2CheckBox.TabIndex = 31;
+            this.Feature2CheckBox.TabIndex = 1;
             this.Feature2CheckBox.Text = "Feature";
             this.Feature2CheckBox.UseVisualStyleBackColor = true;
             // 
@@ -947,9 +967,109 @@
             this.Feature1CheckBox.Location = new System.Drawing.Point(6, 6);
             this.Feature1CheckBox.Name = "Feature1CheckBox";
             this.Feature1CheckBox.Size = new System.Drawing.Size(62, 17);
-            this.Feature1CheckBox.TabIndex = 30;
+            this.Feature1CheckBox.TabIndex = 0;
             this.Feature1CheckBox.Text = "Feature";
             this.Feature1CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature40CheckBox
+            // 
+            this.Feature40CheckBox.AutoSize = true;
+            this.Feature40CheckBox.Location = new System.Drawing.Point(295, 443);
+            this.Feature40CheckBox.Name = "Feature40CheckBox";
+            this.Feature40CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature40CheckBox.TabIndex = 39;
+            this.Feature40CheckBox.Text = "Feature";
+            this.Feature40CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature39CheckBox
+            // 
+            this.Feature39CheckBox.AutoSize = true;
+            this.Feature39CheckBox.Location = new System.Drawing.Point(295, 420);
+            this.Feature39CheckBox.Name = "Feature39CheckBox";
+            this.Feature39CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature39CheckBox.TabIndex = 38;
+            this.Feature39CheckBox.Text = "Feature";
+            this.Feature39CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature38CheckBox
+            // 
+            this.Feature38CheckBox.AutoSize = true;
+            this.Feature38CheckBox.Location = new System.Drawing.Point(295, 397);
+            this.Feature38CheckBox.Name = "Feature38CheckBox";
+            this.Feature38CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature38CheckBox.TabIndex = 37;
+            this.Feature38CheckBox.Text = "Feature";
+            this.Feature38CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature37CheckBox
+            // 
+            this.Feature37CheckBox.AutoSize = true;
+            this.Feature37CheckBox.Location = new System.Drawing.Point(295, 374);
+            this.Feature37CheckBox.Name = "Feature37CheckBox";
+            this.Feature37CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature37CheckBox.TabIndex = 36;
+            this.Feature37CheckBox.Text = "Feature";
+            this.Feature37CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature36CheckBox
+            // 
+            this.Feature36CheckBox.AutoSize = true;
+            this.Feature36CheckBox.Location = new System.Drawing.Point(295, 351);
+            this.Feature36CheckBox.Name = "Feature36CheckBox";
+            this.Feature36CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature36CheckBox.TabIndex = 35;
+            this.Feature36CheckBox.Text = "Feature";
+            this.Feature36CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature35CheckBox
+            // 
+            this.Feature35CheckBox.AutoSize = true;
+            this.Feature35CheckBox.Location = new System.Drawing.Point(295, 328);
+            this.Feature35CheckBox.Name = "Feature35CheckBox";
+            this.Feature35CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature35CheckBox.TabIndex = 34;
+            this.Feature35CheckBox.Text = "Feature";
+            this.Feature35CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature34CheckBox
+            // 
+            this.Feature34CheckBox.AutoSize = true;
+            this.Feature34CheckBox.Location = new System.Drawing.Point(295, 305);
+            this.Feature34CheckBox.Name = "Feature34CheckBox";
+            this.Feature34CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature34CheckBox.TabIndex = 33;
+            this.Feature34CheckBox.Text = "Feature";
+            this.Feature34CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature33CheckBox
+            // 
+            this.Feature33CheckBox.AutoSize = true;
+            this.Feature33CheckBox.Location = new System.Drawing.Point(295, 282);
+            this.Feature33CheckBox.Name = "Feature33CheckBox";
+            this.Feature33CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature33CheckBox.TabIndex = 32;
+            this.Feature33CheckBox.Text = "Feature";
+            this.Feature33CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature32CheckBox
+            // 
+            this.Feature32CheckBox.AutoSize = true;
+            this.Feature32CheckBox.Location = new System.Drawing.Point(295, 259);
+            this.Feature32CheckBox.Name = "Feature32CheckBox";
+            this.Feature32CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature32CheckBox.TabIndex = 31;
+            this.Feature32CheckBox.Text = "Feature";
+            this.Feature32CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Feature31CheckBox
+            // 
+            this.Feature31CheckBox.AutoSize = true;
+            this.Feature31CheckBox.Location = new System.Drawing.Point(295, 236);
+            this.Feature31CheckBox.Name = "Feature31CheckBox";
+            this.Feature31CheckBox.Size = new System.Drawing.Size(62, 17);
+            this.Feature31CheckBox.TabIndex = 30;
+            this.Feature31CheckBox.Text = "Feature";
+            this.Feature31CheckBox.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -957,7 +1077,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.DiscardButton;
-            this.ClientSize = new System.Drawing.Size(634, 477);
+            this.ClientSize = new System.Drawing.Size(634, 561);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.DiscardButton);
             this.Controls.Add(this.SaveButton);
@@ -966,9 +1086,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(650, 515);
+            this.MaximumSize = new System.Drawing.Size(650, 600);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(650, 515);
+            this.MinimumSize = new System.Drawing.Size(650, 600);
             this.Name = "MainForm";
             this.Text = "Enhanced Features";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormClosing);
@@ -1075,5 +1195,15 @@
         private System.Windows.Forms.CheckBox Feature3CheckBox;
         private System.Windows.Forms.CheckBox Feature2CheckBox;
         private System.Windows.Forms.CheckBox Feature1CheckBox;
+        private System.Windows.Forms.CheckBox Feature40CheckBox;
+        private System.Windows.Forms.CheckBox Feature39CheckBox;
+        private System.Windows.Forms.CheckBox Feature38CheckBox;
+        private System.Windows.Forms.CheckBox Feature37CheckBox;
+        private System.Windows.Forms.CheckBox Feature36CheckBox;
+        private System.Windows.Forms.CheckBox Feature35CheckBox;
+        private System.Windows.Forms.CheckBox Feature34CheckBox;
+        private System.Windows.Forms.CheckBox Feature33CheckBox;
+        private System.Windows.Forms.CheckBox Feature32CheckBox;
+        private System.Windows.Forms.CheckBox Feature31CheckBox;
     }
 }

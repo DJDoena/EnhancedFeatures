@@ -72,6 +72,26 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         public String Feature30Label = Texts.Feature30;
 
+        public String Feature31Label = Texts.Feature31;
+
+        public String Feature32Label = Texts.Feature32;
+
+        public String Feature33Label = Texts.Feature33;
+
+        public String Feature34Label = Texts.Feature34;
+
+        public String Feature35Label = Texts.Feature35;
+
+        public String Feature36Label = Texts.Feature36;
+
+        public String Feature37Label = Texts.Feature37;
+
+        public String Feature38Label = Texts.Feature38;
+
+        public String Feature39Label = Texts.Feature39;
+
+        public String Feature40Label = Texts.Feature40;
+
         #endregion
 
         #region InvelosData
@@ -195,6 +215,26 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         public Boolean Feature29 = false;
 
         public Boolean Feature30 = false;
+
+        public Boolean Feature31 = false;
+
+        public Boolean Feature32 = false;
+
+        public Boolean Feature33 = false;
+
+        public Boolean Feature34 = false;
+
+        public Boolean Feature35 = false;
+
+        public Boolean Feature36 = false;
+
+        public Boolean Feature37 = false;
+
+        public Boolean Feature38 = false;
+
+        public Boolean Feature39 = false;
+
+        public Boolean Feature40 = false;
 
         #endregion
 

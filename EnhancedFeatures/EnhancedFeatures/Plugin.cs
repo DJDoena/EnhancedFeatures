@@ -18,7 +18,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
     [Guid(ClassGuid.ClassID), ComVisible(true)]
     public class Plugin : IDVDProfilerPlugin, IDVDProfilerPluginInfo, IDVDProfilerDataAwarePlugin
     {
-        public const Byte FeatureCount = 30;
+        public const Byte FeatureCount = 40;
 
         private readonly String SettingsFile;
 

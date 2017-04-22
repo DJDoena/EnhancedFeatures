@@ -348,4 +348,34 @@
   <data name="Feature" xml:space="preserve">
     <value>Suppl.</value>
   </data>
+  <data name="Feature31" xml:space="preserve">
+    <value>Supplément 31</value>
+  </data>
+  <data name="Feature32" xml:space="preserve">
+    <value>Supplément 32</value>
+  </data>
+  <data name="Feature33" xml:space="preserve">
+    <value>Supplément 33</value>
+  </data>
+  <data name="Feature34" xml:space="preserve">
+    <value>Supplément 34</value>
+  </data>
+  <data name="Feature35" xml:space="preserve">
+    <value>Supplément 35</value>
+  </data>
+  <data name="Feature36" xml:space="preserve">
+    <value>Supplément 36</value>
+  </data>
+  <data name="Feature37" xml:space="preserve">
+    <value>Supplément 37</value>
+  </data>
+  <data name="Feature38" xml:space="preserve">
+    <value>Supplément 38</value>
+  </data>
+  <data name="Feature39" xml:space="preserve">
+    <value>Supplément 39</value>
+  </data>
+  <data name="Feature40" xml:space="preserve">
+    <value>Supplément 40</value>
+  </data>
 </root>

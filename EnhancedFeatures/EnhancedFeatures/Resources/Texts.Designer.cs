@@ -484,11 +484,101 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Feature 31.
+        /// </summary>
+        internal static string Feature31 {
+            get {
+                return ResourceManager.GetString("Feature31", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 32.
+        /// </summary>
+        internal static string Feature32 {
+            get {
+                return ResourceManager.GetString("Feature32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 33.
+        /// </summary>
+        internal static string Feature33 {
+            get {
+                return ResourceManager.GetString("Feature33", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 34.
+        /// </summary>
+        internal static string Feature34 {
+            get {
+                return ResourceManager.GetString("Feature34", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 35.
+        /// </summary>
+        internal static string Feature35 {
+            get {
+                return ResourceManager.GetString("Feature35", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 36.
+        /// </summary>
+        internal static string Feature36 {
+            get {
+                return ResourceManager.GetString("Feature36", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 37.
+        /// </summary>
+        internal static string Feature37 {
+            get {
+                return ResourceManager.GetString("Feature37", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 38.
+        /// </summary>
+        internal static string Feature38 {
+            get {
+                return ResourceManager.GetString("Feature38", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 39.
+        /// </summary>
+        internal static string Feature39 {
+            get {
+                return ResourceManager.GetString("Feature39", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bonus Episodes.
         /// </summary>
         internal static string Feature4 {
             get {
                 return ResourceManager.GetString("Feature4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature 40.
+        /// </summary>
+        internal static string Feature40 {
+            get {
+                return ResourceManager.GetString("Feature40", resourceCulture);
             }
         }
         
