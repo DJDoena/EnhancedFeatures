@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>À propos</value>
+  </data>
+  <data name="Basics" xml:space="preserve">
+    <value>Bases</value>
+  </data>
+  <data name="BonusTrailer" xml:space="preserve">
+    <value>Autres bandes-annonces</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Vérifier les mises à jour</value>
+  </data>
+  <data name="ClosedCaptioned" xml:space="preserve">
+    <value>S.-t. pour malentendants</value>
+  </data>
+  <data name="Commentary" xml:space="preserve">
+    <value>Commentaires</value>
+  </data>
+  <data name="CopyAllToClipboard" xml:space="preserve">
+    <value>Tout copier</value>
+  </data>
+  <data name="DeletedScenes" xml:space="preserve">
+    <value>Scènes supprimées</value>
+  </data>
+  <data name="DigitalCopy" xml:space="preserve">
+    <value>Copie numérique</value>
+  </data>
+  <data name="DVDROMContent" xml:space="preserve">
+    <value>Contenu DVD-ROM</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="ExcelColumns" xml:space="preserve">
+    <value>Colonnes Excel</value>
+  </data>
+  <data name="ExportOptions" xml:space="preserve">
+    <value>Exporter les options</value>
+  </data>
+  <data name="ExportToCollectionXml" xml:space="preserve">
+    <value>Exporter vers Collection.xml</value>
+  </data>
+  <data name="ExportToExcel" xml:space="preserve">
+    <value>Exporter vers Excel</value>
+  </data>
+  <data name="ExportToXml" xml:space="preserve">
+    <value>Exporter vers XML</value>
+  </data>
+  <data name="Feature1" xml:space="preserve">
+    <value>Fin(s) alternative(s)</value>
+  </data>
+  <data name="Feature10" xml:space="preserve">
+    <value>Test d'écran</value>
+  </data>
+  <data name="Feature11" xml:space="preserve">
+    <value>SeasonPlay</value>
+  </data>
+  <data name="Feature12" xml:space="preserve">
+    <value>Court-métrage(s)</value>
+  </data>
+  <data name="Feature13" xml:space="preserve">
+    <value>Chansons de groupe</value>
+  </data>
+  <data name="Feature14" xml:space="preserve">
+    <value>Livre de contes</value>
+  </data>
+  <data name="Feature15" xml:space="preserve">
+    <value>Anecdotes</value>
+  </data>
+  <data name="Feature16" xml:space="preserve">
+    <value>Jaquette réversible</value>
+  </data>
+  <data name="Feature18" xml:space="preserve">
+    <value>Liens Internet</value>
+  </data>
+  <data name="Feature19" xml:space="preserve">
+    <value>Episode Internet</value>
+  </data>
+  <data name="Feature2" xml:space="preserve">
+    <value>Croquis d'artiste</value>
+  </data>
+  <data name="Feature20" xml:space="preserve">
+    <value>Supplément 20</value>
+  </data>
+  <data name="Feature21" xml:space="preserve">
+    <value>Supplément 21</value>
+  </data>
+  <data name="Feature22" xml:space="preserve">
+    <value>Supplément 22</value>
+  </data>
+  <data name="Feature23" xml:space="preserve">
+    <value>Supplément 23</value>
+  </data>
+  <data name="Feature24" xml:space="preserve">
+    <value>Supplément 24</value>
+  </data>
+  <data name="Feature25" xml:space="preserve">
+    <value>Supplément 25</value>
+  </data>
+  <data name="Feature26" xml:space="preserve">
+    <value>Supplément 26</value>
+  </data>
+  <data name="Feature27" xml:space="preserve">
+    <value>Supplément 27</value>
+  </data>
+  <data name="Feature28" xml:space="preserve">
+    <value>Supplément 28</value>
+  </data>
+  <data name="Feature29" xml:space="preserve">
+    <value>Supplément 29</value>
+  </data>
+  <data name="Feature3" xml:space="preserve">
+    <value>CD Bonus</value>
+  </data>
+  <data name="Feature30" xml:space="preserve">
+    <value>Supplément 30</value>
+  </data>
+  <data name="Feature4" xml:space="preserve">
+    <value>Episodes supplémentaires</value>
+  </data>
+  <data name="Feature5" xml:space="preserve">
+    <value>Livret</value>
+  </data>
+  <data name="Feature6" xml:space="preserve">
+    <value>Certificat d'authenticité</value>
+  </data>
+  <data name="Feature7" xml:space="preserve">
+    <value>Montage de blagues</value>
+  </data>
+  <data name="Feature8" xml:space="preserve">
+    <value>Mini Affiche(s)</value>
+  </data>
+  <data name="Feature9" xml:space="preserve">
+    <value>Métrage inédit</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Suppléments</value>
+  </data>
+  <data name="FeatureTrailers" xml:space="preserve">
+    <value>Bandes-annonces du film</value>
+  </data>
+  <data name="Featurettes" xml:space="preserve">
+    <value>Documentaire(s)</value>
+  </data>
+  <data name="FilterCount" xml:space="preserve">
+    <value>Nombre de filtres</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Galerie de photos</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="ImportFromXml" xml:space="preserve">
+    <value>Importer depuis XML</value>
+  </data>
+  <data name="ImportOptions" xml:space="preserve">
+    <value>Importer les options</value>
+  </data>
+  <data name="InteractiveGames" xml:space="preserve">
+    <value>Jeux interactifs</value>
+  </data>
+  <data name="InvelosData" xml:space="preserve">
+    <value>Données Invelos</value>
+  </data>
+  <data name="Labels" xml:space="preserve">
+    <value>Intitulés</value>
+  </data>
+  <data name="LoadXmlFile" xml:space="preserve">
+    <value>Charger les Enhanced Features depuis XML</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Divers</value>
+  </data>
+  <data name="MultiAngle" xml:space="preserve">
+    <value>Angles multiples</value>
+  </data>
+  <data name="MusicVideos" xml:space="preserve">
+    <value>Vidéo clip(s)</value>
+  </data>
+  <data name="OriginalTitle" xml:space="preserve">
+    <value>Titre original</value>
+  </data>
+  <data name="OuttakesBloopers" xml:space="preserve">
+    <value>Bêtisier / Prises ratées</value>
+  </data>
+  <data name="PasteAllFromClipboard" xml:space="preserve">
+    <value>Tout coller</value>
+  </data>
+  <data name="PictureInPicture" xml:space="preserve">
+    <value>Picture-in-Picture</value>
+  </data>
+  <data name="PlayAll" xml:space="preserve">
+    <value>Tout lire</value>
+  </data>
+  <data name="PluginData" xml:space="preserve">
+    <value>Données du plugin</value>
+  </data>
+  <data name="ProductionNotesBios" xml:space="preserve">
+    <value>Notes / Biographies</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="SaveXmlFile" xml:space="preserve">
+    <value>Sauvegarder les Enhanced Features en XML</value>
+  </data>
+  <data name="SceneAccess" xml:space="preserve">
+    <value>Accès aux scènes</value>
+  </data>
+  <data name="SortTitle" xml:space="preserve">
+    <value>Titres de tri</value>
+  </data>
+  <data name="StoryboardComparisons" xml:space="preserve">
+    <value>Comparaison Storyboard</value>
+  </data>
+  <data name="THXCertified" xml:space="preserve">
+    <value>Certifié THX</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titre</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Outils</value>
+  </data>
+  <data name="Feature" xml:space="preserve">
+    <value>Suppl.</value>
+  </data>
+</root>
