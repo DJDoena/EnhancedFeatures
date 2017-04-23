@@ -18,6 +18,8 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private Boolean DataChanged;
 
+        private CheckBox[] FeatureCheckBoxes;
+
         internal MainForm(Plugin plugin
             , IDVDInfo profile)
         {
@@ -26,6 +28,8 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             InitializeComponent();
 
+            SetPluginTabPageControls();
+
             FeatureManager = new FeatureManager(Profile);
 
             SetData();
@@ -33,6 +37,55 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             SetReadOnlies();
 
             DataChanged = false;
+        }
+
+        private void SetPluginTabPageControls()
+        {
+            const Byte FeatureCount = Plugin.FeatureCount;
+
+            FeatureCheckBoxes = new CheckBox[FeatureCount];
+
+            for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
+            {
+                const Int32 Offset = 23;
+
+                const Byte Half = FeatureCount / 2;
+
+                Int32 left;
+                Int32 top;
+                if (featureIndex <= Half)
+                {
+                    left = 6;
+
+                    top = 6 + ((featureIndex - 1) * Offset);
+                }
+                else
+                {
+                    left = 306;
+
+                    top = 6 + ((featureIndex - 1 - Half) * Offset);
+                }
+
+                AddFeatureCheckBox(featureIndex, left, top);
+            }
+
+            PluginTabPage.Controls.AddRange(FeatureCheckBoxes);
+        }
+
+        private void AddFeatureCheckBox(Byte featureIndex
+            , Int32 left
+            , Int32 top)
+        {
+            CheckBox checkBox = new CheckBox();
+
+            checkBox.AutoSize = true;
+            checkBox.Location = new System.Drawing.Point(left, top);
+            checkBox.Name = $"Feature{featureIndex}CheckBox";
+            checkBox.Size = new System.Drawing.Size(62, 17);
+            checkBox.TabIndex = featureIndex - 1;
+            checkBox.UseVisualStyleBackColor = true;
+
+            FeatureCheckBoxes[featureIndex - 1] = checkBox;
         }
 
         private void SetReadOnlies()
@@ -75,7 +128,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             SetPluginCheckeds();
 
-            SetLabels();            
+            SetLabels();
         }
 
         private void SetLabels()
@@ -91,19 +144,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             DefaultValues dv = Plugin.Settings.DefaultValues;
 
-            Type defaultValueType = dv.GetType();
-
-            Type thisType = GetType();
-
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo checkBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}CheckBox", BindingFlags.NonPublic | BindingFlags.Instance);
-
-                CheckBox checkBoxFieldValue = (CheckBox)(checkBoxField.GetValue(this));
-
-                FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                checkBoxFieldValue.Text = (String)(labelField.GetValue(dv));
+                FeatureCheckBoxes[featureIndex - 1].Text = dv.FeatureLabels[featureIndex];
             }
         }
 
@@ -111,17 +154,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             DefaultValues dv = Plugin.Settings.DefaultValues;
 
-            Type defaultValueType = dv.GetType();
-
-            Type thisType = GetType();
-
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo checkBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}CheckBox", BindingFlags.NonPublic | BindingFlags.Instance);
-
-                CheckBox checkBoxFieldValue = (CheckBox)(checkBoxField.GetValue(this));
-
-                checkBoxFieldValue.Checked = FeatureManager.GetFeature(featureIndex);
+                FeatureCheckBoxes[featureIndex - 1].Checked = FeatureManager.GetFeature(featureIndex);
             }
         }
 
@@ -228,17 +263,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             DefaultValues dv = Plugin.Settings.DefaultValues;
 
-            Type defaultValueType = dv.GetType();
-
-            Type thisType = GetType();
-
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo checkBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}CheckBox", BindingFlags.NonPublic | BindingFlags.Instance);
-
-                CheckBox checkBoxFieldValue = (CheckBox)(checkBoxField.GetValue(this));
-
-                FeatureManager.SetFeature(featureIndex, checkBoxFieldValue.Checked);
+                FeatureManager.SetFeature(featureIndex, FeatureCheckBoxes[featureIndex - 1].Checked);
             }
 
             Plugin.Api.SaveDVDToCollection(Profile);
@@ -305,31 +332,23 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             EnhancedFeatures ef = new EnhancedFeatures();
 
-            List<Feature> features = new List<Feature>(Plugin.FeatureCount);
+            const Byte FeatureCount = Plugin.FeatureCount;
 
-            Type defaultValueType = dv.GetType();
+            List<Feature> features = new List<Feature>();
 
-            Type thisType = GetType();
-
-            for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
+            for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
             {
-                FieldInfo checkBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}CheckBox", BindingFlags.NonPublic | BindingFlags.Instance);
+                Boolean isChecked = FeatureCheckBoxes[featureIndex - 1].Checked;
 
-                CheckBox checkBoxFieldValue = (CheckBox)(checkBoxField.GetValue(this));
-
-                if (checkBoxFieldValue.Checked)
+                if (isChecked)
                 {
-                    FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                    String labelFieldValue = (String)(labelField.GetValue(dv));
-
                     Feature feature = new Feature();
 
                     feature.Index = featureIndex;
 
-                    feature.Value = checkBoxFieldValue.Checked;
+                    feature.Value = isChecked;
 
-                    feature.DisplayName = labelFieldValue;
+                    feature.DisplayName = dv.FeatureLabels[featureIndex];
 
                     features.Add(feature);
                 }
@@ -375,15 +394,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetEnhancedFeaturesFromXmlStructure(Feature[] features)
         {
-            Type thisType = GetType();
-
             foreach (Feature feature in features)
             {
-                FieldInfo checkBoxField = thisType.GetField($"{Constants.Feature}{feature.Index}CheckBox", BindingFlags.NonPublic | BindingFlags.Instance);
-
-                CheckBox checkBoxFieldValue = (CheckBox)(checkBoxField.GetValue(this));
-
-                checkBoxFieldValue.Checked = feature.Value;
+                FeatureCheckBoxes[feature.Index - 1].Checked = feature.Value;
             }
         }
 

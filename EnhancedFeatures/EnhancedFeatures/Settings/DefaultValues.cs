@@ -10,6 +10,36 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
     [ComVisible(false)]
     public sealed class DefaultValues
     {
+        private FeatureLabels m_FeatureLabels;
+
+        internal FeatureLabels FeatureLabels
+        {
+            get
+            {
+                if (m_FeatureLabels == null)
+                {
+                    m_FeatureLabels = new FeatureLabels(this);
+                }
+
+                return (m_FeatureLabels);
+            }
+        }
+
+        private ExcelFeatures m_ExcelFeatures;
+
+        internal ExcelFeatures ExcelFeatures
+        {
+            get
+            {
+                if (m_ExcelFeatures == null)
+                {
+                    m_ExcelFeatures = new ExcelFeatures(this);
+                }
+
+                return (m_ExcelFeatures);
+            }
+        }
+
         #region Labels
 
         public String Feature1Label = Texts.Feature1;

@@ -90,9 +90,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                                     WriteInvelosFeaturesHeader(sw, dv, listSeparator);
 
-                                    Type defaultValueType = dv.GetType();
-
-                                    WritePluginHeader(sw, dv, defaultValueType, listSeparator);
+                                    WritePluginHeader(sw, dv, listSeparator);
 
                                     sw.WriteLine();
 
@@ -111,7 +109,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                                         WriteInvelosFeaturesRow(sw, profile, dv, listSeparator);
 
-                                        WritePluginRow(sw, profile, dv, defaultValueType, listSeparator);
+                                        WritePluginRow(sw, profile, dv, listSeparator);
 
                                         sw.WriteLine();
 
@@ -334,20 +332,13 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private static void WritePluginHeader(StreamWriter sw
             , DefaultValues dv
-            , Type defaultValueType
             , String listSeparator)
         {
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo valueField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}", BindingFlags.Public | BindingFlags.Instance);
-
-                Boolean valueFieldValue = (Boolean)(valueField.GetValue(dv));
-
-                if (valueFieldValue)
+                if (dv.ExcelFeatures[featureIndex])
                 {
-                    FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                    WriteText(sw, (String)(labelField.GetValue(dv)), listSeparator);
+                    WriteText(sw, dv.FeatureLabels[featureIndex], listSeparator);
                 }
             }
         }
@@ -511,22 +502,15 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private static void WritePluginRow(StreamWriter sw
             , IDVDInfo profile
             , DefaultValues dv
-            , Type defaultValueType
             , String listSeparator)
         {
             FeatureManager featureManager = new FeatureManager(profile);
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo valueField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}", BindingFlags.Public | BindingFlags.Instance);
-
-                Boolean valueFieldValue = (Boolean)(valueField.GetValue(dv));
-
-                if (valueFieldValue)
+                if (dv.ExcelFeatures[featureIndex])
                 {
-                    Boolean value = featureManager.GetFeature(featureIndex);
-
-                    WriteBoolean(sw, value, listSeparator);
+                    WriteBoolean(sw, featureManager.GetFeature(featureIndex), listSeparator);
                 }
             }
         }

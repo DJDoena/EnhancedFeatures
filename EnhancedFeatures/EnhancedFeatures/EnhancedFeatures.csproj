@@ -47,14 +47,6 @@
     <AssemblyOriginatorKeyFile>EnhancedFeatures.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.WindowsAPICodePack-Core.1.1.0.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -97,6 +89,8 @@
       <DependentUpon>Texts.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings\DefaultValues.cs" />
+    <Compile Include="Settings\ExcelFeatures.cs" />
+    <Compile Include="Settings\FeatureLabels.cs" />
     <Compile Include="Settings\Settings.cs" />
     <Compile Include="Managers\XmlManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -115,7 +109,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="EnhancedFeatures.snk" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\MainForm.resx">
@@ -147,6 +140,14 @@
     <ProjectReference Include="..\..\EnhancedFeaturesLibrary\EnhancedFeaturesLibrary\EnhancedFeaturesLibrary.csproj">
       <Project>{B045C2A8-CDA6-4491-A88E-8817F504A072}</Project>
       <Name>EnhancedFeaturesLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Microsoft.WindowsAPICodePack\Core\Core.csproj">
+      <Project>{2e1fb0df-f9bb-4909-9f32-2d9d022a8e57}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Microsoft.WindowsAPICodePack\Shell\Shell.csproj">
+      <Project>{aa0c00cb-8699-4f37-bfae-40ca87acc06d}</Project>
+      <Name>Shell</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

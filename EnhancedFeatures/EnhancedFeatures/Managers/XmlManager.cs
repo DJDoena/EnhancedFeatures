@@ -1,11 +1,10 @@
-﻿using DoenaSoft.DVDProfiler.DVDProfilerHelper;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.EnhancedFeatures.Resources;
 using Invelos.DVDProfilerPlugin;
 using Microsoft.WindowsAPICodePack.Taskbar;
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using System.Reflection;
 
 namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 {
@@ -98,7 +97,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                         try
                         {
-                            Serializer< EnhancedFeaturesList>.Serialize(sfd.FileName, efs);
+                            Serializer<EnhancedFeaturesList>.Serialize(sfd.FileName, efs);
 
                             #region Progress
 
@@ -154,27 +153,23 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             xmlProfile.Id = profile.GetProfileID();
             xmlProfile.Title = profile.GetTitle();
 
-            List<Feature> features = new List<Feature>(Plugin.FeatureCount);
+            const Byte FeatureCount = Plugin.FeatureCount;
 
-            Type defaultValueType = dv.GetType();
+            List<Feature> features = new List<Feature>(FeatureCount);
 
-            for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
+            for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
             {
                 Boolean value = featureManager.GetFeature(featureIndex);
 
                 if (value)
                 {
-                    FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                    String labelFieldValue = (String)(labelField.GetValue(dv));
-
                     Feature feature = new Feature();
 
                     feature.Index = featureIndex;
 
                     feature.Value = value;
 
-                    feature.DisplayName = labelFieldValue;
+                    feature.DisplayName = dv.FeatureLabels[featureIndex];
 
                     features.Add(feature);
                 }
@@ -219,7 +214,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                     {
                         Int32 count = 0;
 
-                        if (efs.Profiles ?.Length > 0)
+                        if (efs.Profiles?.Length > 0)
                         {
                             using (ProgressWindow progressWindow = new ProgressWindow())
                             {
@@ -262,7 +257,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                                 foreach (Profile xmlProfile in efs.Profiles)
                                 {
-                                    if ((xmlProfile ?.EnhancedFeatures != null) && (profileIds.ContainsKey(xmlProfile.Id)))
+                                    if ((xmlProfile?.EnhancedFeatures != null) && (profileIds.ContainsKey(xmlProfile.Id)))
                                     {
                                         IDVDInfo profile = Plugin.Api.CreateDVD();
 

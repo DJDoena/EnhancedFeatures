@@ -11,11 +11,19 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
     {
         private readonly Plugin Plugin;
 
+        private Label[] FeatureLabels;
+
+        private TextBox[] FeatureTextBoxes;
+
+        private CheckBox[] FeatureCheckBoxes;
+
         public SettingsForm(Plugin plugin)
         {
             Plugin = plugin;
 
             InitializeComponent();
+
+            SetControls();
 
             SetSettings();
 
@@ -23,6 +31,134 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             SetComboBoxes();
         }
+
+        #region SetControls
+
+        private void SetControls()
+        {
+            SetLabelTabPageControls();
+
+            SetPluginTabPageControls();
+        }
+
+        private void SetLabelTabPageControls()
+        {
+            const Byte FeatureCount = Plugin.FeatureCount;
+
+            FeatureLabels = new Label[FeatureCount];
+
+            FeatureTextBoxes = new TextBox[FeatureCount];
+
+            for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
+            {
+                const Int32 Offset = 26;
+
+                const Byte Half = FeatureCount / 2;
+
+                Int32 left;
+                Int32 top;
+                if (featureIndex <= Half)
+                {
+                    left = 6;
+
+                    top = 6 + ((featureIndex - 1) * Offset);
+                }
+                else
+                {
+                    left = 336;
+
+                    top = 6 + ((featureIndex - 1 - Half) * Offset);
+                }
+
+                AddFeatureLabel(featureIndex, left, top + 3);
+
+                AddFeatureTextBoxes(featureIndex, left + 70, top);
+            }
+
+            LabelTabPage.Controls.AddRange(FeatureLabels);
+            LabelTabPage.Controls.AddRange(FeatureTextBoxes);
+        }
+
+        private void AddFeatureLabel(Byte featureIndex
+            , Int32 left
+            , Int32 top)
+        {
+            Label label = new Label();
+
+            label.AutoSize = true;
+            label.Location = new System.Drawing.Point(left, top);
+            label.Name = $"Feature{featureIndex}{Constants.LabelSuffix}";
+            label.Size = new System.Drawing.Size(55, 13);
+            label.TabIndex = (featureIndex - 1) * 2;
+
+            FeatureLabels[featureIndex - 1] = label;
+        }
+
+        private void AddFeatureTextBoxes(Byte featureIndex
+            , Int32 left
+            , Int32 top)
+        {
+            TextBox textBox = new TextBox();
+
+            textBox.Location = new System.Drawing.Point(left, top);
+            textBox.MaxLength = 30;
+            textBox.Name = $"Feature{featureIndex}TextBox";
+            textBox.Size = new System.Drawing.Size(200, 20);
+            textBox.TabIndex = (featureIndex - 1) * 2 + 1;
+
+            FeatureTextBoxes[featureIndex - 1] = textBox;
+        }
+
+        private void SetPluginTabPageControls()
+        {
+            const Byte FeatureCount = Plugin.FeatureCount;
+
+            FeatureCheckBoxes = new CheckBox[FeatureCount];
+
+            for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
+            {
+                const Int32 Offset = 23;
+
+                const Byte Half = FeatureCount / 2;
+
+                Int32 left;
+                Int32 top;
+                if (featureIndex <= Half)
+                {
+                    left = 6;
+
+                    top = 6 + ((featureIndex - 1) * Offset);
+                }
+                else
+                {
+                    left = 306;
+
+                    top = 6 + ((featureIndex - 1 - Half) * Offset);
+                }
+
+                AddFeatureCheckBox(featureIndex, left, top);
+            }
+
+            PluginTabPage.Controls.AddRange(FeatureCheckBoxes);
+        }
+
+        private void AddFeatureCheckBox(Byte featureIndex
+            , Int32 left
+            , Int32 top)
+        {
+            CheckBox checkBox = new CheckBox();
+
+            checkBox.AutoSize = true;
+            checkBox.Location = new System.Drawing.Point(left, top);
+            checkBox.Name = $"Feature{featureIndex}CheckBox";
+            checkBox.Size = new System.Drawing.Size(62, 17);
+            checkBox.TabIndex = featureIndex - 1;
+            checkBox.UseVisualStyleBackColor = true;
+
+            FeatureCheckBoxes[featureIndex - 1] = checkBox;
+        }
+
+        #endregion
 
         private void SetSettings()
         {
@@ -81,31 +217,17 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             DefaultValues dv = Plugin.Settings.DefaultValues;
 
-            Type defaultValueType = dv.GetType();
-
-            Type thisType = GetType();
-
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo checkBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}CheckBox", BindingFlags.NonPublic | BindingFlags.Instance);
+                CheckBox checkBox = FeatureCheckBoxes[featureIndex - 1];
 
-                CheckBox checkBoxFieldValue = (CheckBox)(checkBoxField.GetValue(this));
+                String label = dv.FeatureLabels[featureIndex];
 
-                FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
+                checkBox.Text = label;
 
-                String labelFieldValue = (String)(labelField.GetValue(dv));
+                checkBox.Checked = dv.ExcelFeatures[featureIndex];
 
-                checkBoxFieldValue.Text = labelFieldValue;
-
-                FieldInfo valueField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}", BindingFlags.Public | BindingFlags.Instance);
-
-                checkBoxFieldValue.Checked = (Boolean)(valueField.GetValue(dv));
-
-                FieldInfo textBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}TextBox", BindingFlags.NonPublic | BindingFlags.Instance);
-
-                TextBox textBoxFieldValue = (TextBox)(textBoxField.GetValue(this));
-
-                textBoxFieldValue.Text = labelFieldValue;
+                FeatureTextBoxes[featureIndex - 1].Text = label;
             }
         }
 
@@ -207,15 +329,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetPluginLabels()
         {
-            Type thisType = GetType();
-
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo labelField = thisType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.NonPublic | BindingFlags.Instance);
-
-                Label labelFieldValue = (Label)(labelField.GetValue(this));
-
-                labelFieldValue.Text = $"{Texts.Feature} {featureIndex}";
+                FeatureLabels[featureIndex - 1].Text = $"{Texts.Feature} {featureIndex}";
             }
         }
 
@@ -232,7 +348,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             SaveInvelosSettings();
 
-            SavePluginSetting();
+            SavePluginSettings();
 
             DefaultValues dv = Plugin.Settings.DefaultValues;
 
@@ -293,31 +409,15 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             dv.MovieIQ = MovieIQCheckBox.Checked;
         }
 
-        private void SavePluginSetting()
+        private void SavePluginSettings()
         {
             DefaultValues dv = Plugin.Settings.DefaultValues;
 
-            Type defaultValueType = dv.GetType();
-
-            Type thisType = GetType();
-
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                FieldInfo checkBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}CheckBox", BindingFlags.NonPublic | BindingFlags.Instance);
+                dv.ExcelFeatures[featureIndex] = FeatureCheckBoxes[featureIndex - 1].Checked;
 
-                CheckBox checkBoxFieldValue = (CheckBox)(checkBoxField.GetValue(this));
-
-                FieldInfo valueField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}", BindingFlags.Public | BindingFlags.Instance);
-
-                valueField.SetValue(dv, checkBoxFieldValue.Checked);
-
-                FieldInfo textBoxField = thisType.GetField($"{Constants.Feature}{featureIndex}TextBox", BindingFlags.NonPublic | BindingFlags.Instance);
-
-                FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                TextBox textBoxFieldValue = (TextBox)(textBoxField.GetValue(this));
-
-                labelField.SetValue(dv, textBoxFieldValue.Text);
+                dv.FeatureLabels[featureIndex] = FeatureTextBoxes[featureIndex - 1].Text;
             }
         }
 

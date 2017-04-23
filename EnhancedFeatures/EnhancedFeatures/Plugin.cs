@@ -281,19 +281,13 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             {
                 DefaultValues dv = Settings.DefaultValues;
 
-                Type defaultValueType = dv.GetType();
-
                 StringBuilder sb = new StringBuilder("<EnhancedFeatures>");
 
                 for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
                 {
                     if (hasFeatures[featureIndex - 1])
                     {
-                        FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                        String labelFieldValue = (String)(labelField.GetValue(dv));
-
-                        AddTag(sb, featureIndex, labelFieldValue);
+                        AddTag(sb, featureIndex, dv.FeatureLabels[featureIndex]);
                     }
                 }
 
@@ -364,13 +358,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                     Byte featureIndex;
                     if (Byte.TryParse(TagName, out featureIndex))
                     {
-                        Type defaultValueType = dv.GetType();
-
-                        FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                        String labelFieldValue = (String)(labelField.GetValue(dv));
-
-                        text = HtmlEncode(labelFieldValue);
+                        text = HtmlEncode(dv.FeatureLabels[featureIndex]);
 
                         Handled = true;
                     }
@@ -456,17 +444,11 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                 DefaultValues dv = Settings.DefaultValues;
 
-                Type defaultValueType = dv.GetType();
-
                 //System.Diagnostics.Debugger.Launch();
 
                 for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
                 {
-                    FieldInfo labelField = defaultValueType.GetField($"{Constants.Feature}{featureIndex}{Constants.LabelSuffix}", BindingFlags.Public | BindingFlags.Instance);
-
-                    String labelFieldValue = (String)(labelField.GetValue(dv));
-
-                    RegisterCustomField($"{Constants.Feature}{featureIndex}", labelFieldValue, rebuildFilters, featureIndex);
+                    RegisterCustomField($"{Constants.Feature}{featureIndex}", dv.FeatureLabels[featureIndex], rebuildFilters, featureIndex);
                 }
             }
             catch (Exception ex)
