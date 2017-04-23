@@ -277,7 +277,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             String xml = String.Empty;
 
-            if (hasFeatures.Any())
+            if (hasFeatures.Any(feature => feature))
             {
                 DefaultValues dv = Settings.DefaultValues;
 
