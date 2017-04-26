@@ -403,7 +403,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void OnCheckForUpdatesToolStripMenuItemClick(Object sender, EventArgs e)
         {
             OnlineAccess.Init("Doena Soft.", "EnhancedFeatures");
-            OnlineAccess.CheckForNewVersion("http://doena-soft.de/dvdprofiler/3.9.0/versions.xml", this, "EnhancedFeatures", GetType().Assembly);
+            OnlineAccess.CheckForNewVersion("http://doena-soft.de/dvdprofiler/3.9.5/versions.xml", this, "EnhancedFeatures", GetType().Assembly);
         }
 
         private void OnAboutToolStripMenuItemClick(Object sender, EventArgs e)
