@@ -61,8 +61,8 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\PluginInterface\PluginInterface.4.cs">
-      <Link>PluginInterface.4.cs</Link>
+    <Compile Include="..\..\PluginInterface\PluginInterface.5.cs">
+      <Link>PluginInterface.5.cs</Link>
     </Compile>
     <Compile Include="InternalConstants.cs" />
     <Compile Include="Forms\MainForm.cs">
