@@ -165,7 +165,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void SetInvelosCheckeds()
         {
             SceneAccessCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_SceneAccess);
-            //PlayAllCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_PlayAll);
+            PlayAllCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_PlayAll);
             FeatureTrailersCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_Trailer);
             BonusTrailerCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_BonusTrailers);
             FeaturettesCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_Documentary);
@@ -185,9 +185,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             DigitalCopyCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_DigitalCopy);
             PictureInPictureCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_PIP);
             BDLiveCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_BDLive);
-            //DBoxCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_DBox);
-            //CineChatCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_CineChat);
-            //MovieIQCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_MovieIQ);
+            DBoxCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_DBOX);
+            CineChatCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_CineChat);
+            MovieIQCheckBox.Checked = Profile.GetFeatureByID(PluginConstants.FEATURE_MovieIQ);
         }
 
         private void SetInvelosLabels()
@@ -261,7 +261,30 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void OnSaveButtonClick(Object sender
             , EventArgs e)
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            Profile.SetFeatureByID(PluginConstants.FEATURE_SceneAccess, SceneAccessCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_PlayAll, PlayAllCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_Trailer, FeatureTrailersCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_BonusTrailers, BonusTrailerCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_Documentary, FeaturettesCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_Commentary, CommentaryCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_DeletedScenes, DeletedScenesCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_Interviews, InterviewsCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_Bloopers, OuttakesBloopersCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_StoryboardComps, StoryboardComparisonsCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_Gallery, GalleryCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_ProductionNotes, ProductionNotesBiosCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_DVDROMContent, DVDROMContentCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_InteractiveGame, InteractiveGamesCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_MultiAngle, MultiAngleCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_MusicVideos, MusicVideosCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_THX, THXCertifiedCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_ClosedCaptioned, ClosedCaptionedCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_DigitalCopy, DigitalCopyCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_PIP, PictureInPictureCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_BDLive, BDLiveCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_DBOX, DBoxCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_CineChat, CineChatCheckBox.Checked);
+            Profile.SetFeatureByID(PluginConstants.FEATURE_MovieIQ, MovieIQCheckBox.Checked);
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
