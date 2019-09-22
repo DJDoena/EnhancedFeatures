@@ -381,7 +381,8 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             if (dv.PlayAll)
             {
-                WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_PlayAll), listSeparator);
+                //WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_PlayAll), listSeparator);
+                WriteBoolean(sw, false, listSeparator);
             }
 
             if (dv.FeatureTrailers)
@@ -481,17 +482,20 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             if (dv.DBox)
             {
-                WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_DBOX), listSeparator);
+                //WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_DBox), listSeparator);
+                WriteBoolean(sw, false, listSeparator);
             }
 
             if (dv.CineChat)
             {
-                WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_CineChat), listSeparator);
+                //WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_CineChat), listSeparator);
+                WriteBoolean(sw, false, listSeparator);
             }
 
             if (dv.MovieIQ)
             {
-                WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_MovieIQ), listSeparator);
+                //WriteBoolean(sw, profile.GetFeatureByID(PluginConstants.FEATURE_MovieIQ), listSeparator);
+                WriteBoolean(sw, false, listSeparator);
             }
         }
 

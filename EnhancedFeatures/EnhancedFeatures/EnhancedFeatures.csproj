@@ -61,8 +61,8 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\PluginInterface\PluginInterface.5.cs">
-      <Link>PluginInterface.5.cs</Link>
+    <Compile Include="..\..\PluginInterface\PluginInterface.4.cs">
+      <Link>PluginInterface.4.cs</Link>
     </Compile>
     <Compile Include="InternalConstants.cs" />
     <Compile Include="Forms\MainForm.cs">
@@ -154,6 +154,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>"%25ProgramFiles%25\Inno Setup 5\iscc.exe"  ..\..\..\..\EnhancedFeaturesSetup\Setup.iss</PostBuildEvent>
+    <PostBuildEvent>"%25ProgramFiles%25\Inno Setup 6\iscc.exe"  ..\..\..\..\EnhancedFeaturesSetup\Setup.iss</PostBuildEvent>
   </PropertyGroup>
 </Project>

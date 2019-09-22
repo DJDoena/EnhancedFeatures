@@ -107,7 +107,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             {
                 try
                 {
-                    Settings = Serializer<Settings>.Deserialize(SettingsFile);
+                    Settings = DVDProfilerSerializer<Settings>.Deserialize(SettingsFile);
                 }
                 catch (Exception ex)
                 {
@@ -146,7 +146,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             try
             {
-                Serializer<Settings>.Serialize(SettingsFile, Settings);
+                DVDProfilerSerializer<Settings>.Serialize(SettingsFile, Settings);
             }
             catch (Exception ex)
             {
@@ -787,7 +787,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        dv = Serializer<DefaultValues>.Deserialize(ofd.FileName);
+                        dv = DVDProfilerSerializer<DefaultValues>.Deserialize(ofd.FileName);
                     }
                     catch (Exception ex)
                     {
@@ -824,7 +824,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        Serializer<DefaultValues>.Serialize(sfd.FileName, dv);
+                        DVDProfilerSerializer<DefaultValues>.Serialize(sfd.FileName, dv);
 
                         MessageBox.Show(MessageBoxTexts.Done, MessageBoxTexts.InformationHeader, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -871,7 +871,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             ExceptionXml exceptionXml = new ExceptionXml(ex);
 
-            Serializer<ExceptionXml>.Serialize(ErrorFile, exceptionXml);
+            DVDProfilerSerializer<ExceptionXml>.Serialize(ErrorFile, exceptionXml);
         }
 
         private Exception WrapCOMException(Exception ex)

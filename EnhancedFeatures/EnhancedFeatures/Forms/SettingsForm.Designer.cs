@@ -269,6 +269,7 @@
             // MovieIQCheckBox
             // 
             this.MovieIQCheckBox.AutoSize = true;
+            this.MovieIQCheckBox.Enabled = false;
             this.MovieIQCheckBox.Location = new System.Drawing.Point(7, 134);
             this.MovieIQCheckBox.Name = "MovieIQCheckBox";
             this.MovieIQCheckBox.Size = new System.Drawing.Size(66, 17);
@@ -279,6 +280,7 @@
             // CineChatCheckBox
             // 
             this.CineChatCheckBox.AutoSize = true;
+            this.CineChatCheckBox.Enabled = false;
             this.CineChatCheckBox.Location = new System.Drawing.Point(6, 111);
             this.CineChatCheckBox.Name = "CineChatCheckBox";
             this.CineChatCheckBox.Size = new System.Drawing.Size(69, 17);
@@ -289,6 +291,7 @@
             // DBoxCheckBox
             // 
             this.DBoxCheckBox.AutoSize = true;
+            this.DBoxCheckBox.Enabled = false;
             this.DBoxCheckBox.Location = new System.Drawing.Point(6, 88);
             this.DBoxCheckBox.Name = "DBoxCheckBox";
             this.DBoxCheckBox.Size = new System.Drawing.Size(55, 17);
@@ -527,6 +530,7 @@
             // PlayAllCheckBox
             // 
             this.PlayAllCheckBox.AutoSize = true;
+            this.PlayAllCheckBox.Enabled = false;
             this.PlayAllCheckBox.Location = new System.Drawing.Point(6, 42);
             this.PlayAllCheckBox.Name = "PlayAllCheckBox";
             this.PlayAllCheckBox.Size = new System.Drawing.Size(60, 17);

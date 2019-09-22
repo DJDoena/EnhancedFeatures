@@ -1,11 +1,11 @@
 [Setup]
 AppName=Enhanced Features
 AppId=EnhancedFeatures
-AppVerName=Enhanced Features 0.9.8.1
-AppCopyright=Copyright © Doena Soft. 2017
+AppVerName=Enhanced Features 1.0.0.0
+AppCopyright=Copyright © Doena Soft. 2017 - 2019
 AppPublisher=Doena Soft.
 AppPublisherURL=http://doena-journal.net/en/dvd-profiler-tools/
-DefaultDirName={pf32}\Doena Soft.\Enhanced Features
+DefaultDirName={commonpf32}\Doena Soft.\Enhanced Features
 ; DefaultGroupName=Doena Soft.
 DirExistsWarning=No
 SourceDir=..\EnhancedFeatures\bin\x86\EnhancedFeatures
@@ -13,16 +13,16 @@ Compression=zip/9
 AppMutex=InvelosDVDPro
 OutputBaseFilename=EnhancedFeaturesSetup
 OutputDir=..\..\..\..\EnhancedFeaturesSetup\Setup\EnhancedFeatures
-MinVersion=0,5.1
+MinVersion=0,6.0
 PrivilegesRequired=admin
 WizardImageFile=compiler:wizmodernimage-is.bmp
 WizardSmallImageFile=compiler:wizmodernsmallimage-is.bmp
 DisableReadyPage=yes
 ShowLanguageDialog=no
 VersionInfoCompany=Doena Soft.
-VersionInfoCopyright=2017
+VersionInfoCopyright=2017 - 2019
 VersionInfoDescription=Enhanced Features Setup
-VersionInfoVersion=0.9.8.1
+VersionInfoVersion=1.0.0.0
 UninstallDisplayIcon={app}\djdsoft.ico
 
 [Languages]

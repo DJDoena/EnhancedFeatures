@@ -97,7 +97,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                         try
                         {
-                            Serializer<EnhancedFeaturesList>.Serialize(sfd.FileName, efs);
+                            DVDProfilerSerializer<EnhancedFeaturesList>.Serialize(sfd.FileName, efs);
 
                             #region Progress
 
@@ -202,7 +202,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        efs = Serializer<EnhancedFeaturesList>.Deserialize(ofd.FileName);
+                        efs = DVDProfilerSerializer<EnhancedFeaturesList>.Deserialize(ofd.FileName);
                     }
                     catch (Exception ex)
                     {
