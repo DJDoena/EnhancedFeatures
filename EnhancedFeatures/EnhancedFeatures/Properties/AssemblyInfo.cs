@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Doena Soft.")]
 [assembly: AssemblyProduct("Enhanced Features")]
-[assembly: AssemblyCopyright("Copyright © Doena Soft. 2017 - 2019")]
+[assembly: AssemblyCopyright("Copyright © Doena Soft. 2017 - 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
