@@ -884,7 +884,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             {
                 String lastApiError = Api.GetLastError();
 
-                EnhancedCOMException newEx = new EnhancedCOMException(comEx, lastApiError);
+                EnhancedCOMException newEx = new EnhancedCOMException(lastApiError, comEx);
 
                 returnEx = newEx;
             }
