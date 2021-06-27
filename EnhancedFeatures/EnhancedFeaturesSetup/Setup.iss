@@ -1,8 +1,8 @@
 [Setup]
 AppName=Enhanced Features
 AppId=EnhancedFeatures
-AppVerName=Enhanced Features 1.0.0.1
-AppCopyright=Copyright © Doena Soft. 2017 - 2020
+AppVerName=Enhanced Features 1.0.0.2
+AppCopyright=Copyright © Doena Soft. 2017 - 2021
 AppPublisher=Doena Soft.
 AppPublisherURL=http://doena-journal.net/en/dvd-profiler-tools/
 DefaultDirName={commonpf32}\Doena Soft.\Enhanced Features
@@ -20,9 +20,9 @@ WizardSmallImageFile=compiler:wizmodernsmallimage-is.bmp
 DisableReadyPage=yes
 ShowLanguageDialog=no
 VersionInfoCompany=Doena Soft.
-VersionInfoCopyright=2017 - 2020
+VersionInfoCopyright=2017 - 2021
 VersionInfoDescription=Enhanced Features Setup
-VersionInfoVersion=1.0.0.1
+VersionInfoVersion=1.0.0.2
 UninstallDisplayIcon={app}\djdsoft.ico
 
 [Languages]
@@ -59,12 +59,12 @@ Source: "fr\EnhancedFeatures.resources.dll"; DestDir: "{app}\fr"; Flags: ignorev
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Run]
-Filename: "{win}\Microsoft.NET\Framework\v2.0.50727\RegAsm.exe"; Parameters: "/codebase ""{app}\EnhancedFeatures.dll"""; Flags: runhidden
+Filename: "{win}\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe"; Parameters: "/codebase ""{app}\EnhancedFeatures.dll"""; Flags: runhidden
 
 ;[UninstallDelete]
 
 [UninstallRun]
-Filename: "{win}\Microsoft.NET\Framework\v2.0.50727\RegAsm.exe"; Parameters: "/u ""{app}\EnhancedFeatures.dll"""; Flags: runhidden
+Filename: "{win}\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe"; Parameters: "/u ""{app}\EnhancedFeatures.dll"""; Flags: runhidden
 
 [Registry]
 ; Register - Cleanup ahead of time in case the user didn't uninstall the previous version.

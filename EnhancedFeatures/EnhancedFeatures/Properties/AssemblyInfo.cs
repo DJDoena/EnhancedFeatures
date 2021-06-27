@@ -6,14 +6,14 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Doena Soft.")]
 [assembly: AssemblyProduct("Enhanced Features")]
-[assembly: AssemblyCopyright("Copyright © Doena Soft. 2017 - 2020")]
+[assembly: AssemblyCopyright("Copyright © Doena Soft. 2017 - 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(true)]
 [assembly: Guid("8CA7BF03-9F8F-499C-A0A5-25CBB0AB9B3E")]
 
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
+[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyFileVersion("1.0.0.2")]
 
 [assembly: AssemblyDelaySign(false)]
