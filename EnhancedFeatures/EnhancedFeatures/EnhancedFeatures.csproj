@@ -64,9 +64,6 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\PluginInterface\PluginInterface.5.cs">
-      <Link>PluginInterface.5.cs</Link>
-    </Compile>
     <Compile Include="InternalConstants.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -136,6 +133,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DoenaSoft.DVDProfiler.Interface">
+      <Version>5.0.2</Version>
+    </PackageReference>
     <PackageReference Include="DoenaSoft.DVDProfilerHelper">
       <Version>2.2.9</Version>
     </PackageReference>

@@ -36,8 +36,10 @@ Name: "full"; Description: "Full installation"
 [Files]
 Source: "djdsoft.ico"; DestDir: "{app}"; Flags: ignoreversion
 
-;Source: "DoenaSoft.EnhancedFeatures.dll"; DestDir: "{app}"; Flags: ignoreversion
-;Source: "DoenaSoft.EnhancedFeatures.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.EnhancedFeatures.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.EnhancedFeatures.pdb"; DestDir: "{app}"; Flags: ignoreversion
+
+Source: "DoenaSoft.DVDProfiler.Interface.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "DoenaSoft.DVDProfilerHelper.dll"; DestDir: "{app}"; Flags: ignoreversion
 
