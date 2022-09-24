@@ -2,7 +2,7 @@
 AppName=Enhanced Features
 AppId=EnhancedFeatures
 AppVerName=Enhanced Features 1.0.0.2
-AppCopyright=Copyright © Doena Soft. 2017 - 2021
+AppCopyright=Copyright © Doena Soft. 2017 - 2022
 AppPublisher=Doena Soft.
 AppPublisherURL=http://doena-journal.net/en/dvd-profiler-tools/
 DefaultDirName={commonpf32}\Doena Soft.\Enhanced Features
@@ -13,14 +13,13 @@ Compression=zip/9
 AppMutex=InvelosDVDPro
 OutputBaseFilename=EnhancedFeaturesSetup
 OutputDir=..\..\..\..\EnhancedFeaturesSetup\Setup\EnhancedFeatures
-MinVersion=0,6.0
+MinVersion=0,6.1sp1
 PrivilegesRequired=admin
-WizardImageFile=compiler:wizmodernimage-is.bmp
-WizardSmallImageFile=compiler:wizmodernsmallimage-is.bmp
+WizardStyle=modern
 DisableReadyPage=yes
 ShowLanguageDialog=no
 VersionInfoCompany=Doena Soft.
-VersionInfoCopyright=2017 - 2021
+VersionInfoCopyright=2017 - 2022
 VersionInfoDescription=Enhanced Features Setup
 VersionInfoVersion=1.0.0.2
 UninstallDisplayIcon={app}\djdsoft.ico
@@ -37,24 +36,20 @@ Name: "full"; Description: "Full installation"
 [Files]
 Source: "djdsoft.ico"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "EnhancedFeatures.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "EnhancedFeatures.pdb"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "DoenaSoft.EnhancedFeatures.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "DoenaSoft.EnhancedFeatures.pdb"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "EnhancedFeatures.xsd"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.DVDProfilerHelper.dll"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "DVDProfilerHelper.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "DVDProfilerHelper.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.EnhancedFeatures.Interface.dll"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "EnhancedFeaturesLibrary.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "EnhancedFeaturesLibrary.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.WindowsAPICodePack.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.WindowsAPICodePack.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "Microsoft.WindowsAPICodePack.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "Microsoft.WindowsAPICodePack.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "de\DoenaSoft.EnhancedFeatures.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
+Source: "de\DoenaSoft.DVDProfilerHelper.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
 
-Source: "de\EnhancedFeatures.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
-Source: "de\DVDProfilerHelper.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
-
-Source: "fr\EnhancedFeatures.resources.dll"; DestDir: "{app}\fr"; Flags: ignoreversion
+Source: "fr\DoenaSoft.EnhancedFeatures.resources.dll"; DestDir: "{app}\fr"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

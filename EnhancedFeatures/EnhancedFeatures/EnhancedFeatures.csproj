@@ -10,7 +10,7 @@
     <ApplicationIcon>DJDSOFT.ICO</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>EnhancedFeatures</AssemblyName>
+    <AssemblyName>DoenaSoft.EnhancedFeatures</AssemblyName>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
@@ -28,6 +28,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -134,27 +136,20 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DVDProfilerHelper\DVDProfilerHelper\DVDProfilerHelper.csproj">
-      <Project>{461dacca-8ebf-4c03-ad1a-c438e4eb3b36}</Project>
-      <Name>DVDProfilerHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\EnhancedFeaturesLibrary\EnhancedFeaturesLibrary\EnhancedFeaturesLibrary.csproj">
-      <Project>{B045C2A8-CDA6-4491-A88E-8817F504A072}</Project>
-      <Name>EnhancedFeaturesLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Microsoft.WindowsAPICodePack\Core\Core.csproj">
-      <Project>{2e1fb0df-f9bb-4909-9f32-2d9d022a8e57}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Microsoft.WindowsAPICodePack\Shell\Shell.csproj">
-      <Project>{aa0c00cb-8699-4f37-bfae-40ca87acc06d}</Project>
-      <Name>Shell</Name>
-    </ProjectReference>
+    <PackageReference Include="DoenaSoft.DVDProfilerHelper">
+      <Version>2.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="DoenaSoft.EnhancedFeatures.Interface">
+      <Version>1.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="DoenaSoft.WindowsAPICodePack">
+      <Version>1.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>"%25ProgramFiles%25\Inno Setup 6\iscc.exe"  ..\..\..\..\EnhancedFeaturesSetup\Setup.iss</PostBuildEvent>
+    <PostBuildEvent>"%25ProgramFiles(x86)%25\Inno Setup 6\iscc.exe" ..\..\..\..\EnhancedFeaturesSetup\Setup.iss</PostBuildEvent>
   </PropertyGroup>
 </Project>

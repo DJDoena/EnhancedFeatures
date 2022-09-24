@@ -1,14 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Libraries", "_Libraries", "{0D0A9F8B-1A98-414A-BF58-41EF7A29DB8A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVDProfilerHelper", "DVDProfilerHelper\DVDProfilerHelper\DVDProfilerHelper.csproj", "{461DACCA-8EBF-4C03-AD1A-C438E4EB3B36}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnhancedFeaturesLibrary", "EnhancedFeaturesLibrary\EnhancedFeaturesLibrary\EnhancedFeaturesLibrary.csproj", "{B045C2A8-CDA6-4491-A88E-8817F504A072}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnhancedFeatures", "EnhancedFeatures\EnhancedFeatures\EnhancedFeatures.csproj", "{A5DE367A-55C9-4D17-8A60-7C4B6D21608D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{B1438390-26C6-43FB-B1A3-6CE0AA4FC3AB}"
@@ -16,33 +10,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{B1438390
 		EnhancedFeatures\EnhancedFeaturesSetup\Setup.iss = EnhancedFeatures\EnhancedFeaturesSetup\Setup.iss
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Microsoft.WindowsAPICodePack\Core\Core.csproj", "{2E1FB0DF-F9BB-4909-9F32-2D9D022A8E57}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell", "Microsoft.WindowsAPICodePack\Shell\Shell.csproj", "{AA0C00CB-8699-4F37-BFAE-40CA87ACC06D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{461DACCA-8EBF-4C03-AD1A-C438E4EB3B36}.Debug|x86.ActiveCfg = Debug|x86
-		{461DACCA-8EBF-4C03-AD1A-C438E4EB3B36}.Debug|x86.Build.0 = Debug|x86
-		{B045C2A8-CDA6-4491-A88E-8817F504A072}.Debug|x86.ActiveCfg = Debug|x86
-		{B045C2A8-CDA6-4491-A88E-8817F504A072}.Debug|x86.Build.0 = Debug|x86
 		{A5DE367A-55C9-4D17-8A60-7C4B6D21608D}.Debug|x86.ActiveCfg = Debug|x86
 		{A5DE367A-55C9-4D17-8A60-7C4B6D21608D}.Debug|x86.Build.0 = Debug|x86
-		{2E1FB0DF-F9BB-4909-9F32-2D9D022A8E57}.Debug|x86.ActiveCfg = Debug|x86
-		{2E1FB0DF-F9BB-4909-9F32-2D9D022A8E57}.Debug|x86.Build.0 = Debug|x86
-		{AA0C00CB-8699-4F37-BFAE-40CA87ACC06D}.Debug|x86.ActiveCfg = Debug|x86
-		{AA0C00CB-8699-4F37-BFAE-40CA87ACC06D}.Debug|x86.Build.0 = Debug|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{461DACCA-8EBF-4C03-AD1A-C438E4EB3B36} = {0D0A9F8B-1A98-414A-BF58-41EF7A29DB8A}
-		{B045C2A8-CDA6-4491-A88E-8817F504A072} = {0D0A9F8B-1A98-414A-BF58-41EF7A29DB8A}
-		{2E1FB0DF-F9BB-4909-9F32-2D9D022A8E57} = {0D0A9F8B-1A98-414A-BF58-41EF7A29DB8A}
-		{AA0C00CB-8699-4F37-BFAE-40CA87ACC06D} = {0D0A9F8B-1A98-414A-BF58-41EF7A29DB8A}
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57C47E02-FEB3-4C2A-AF10-C296EED448FA}
 	EndGlobalSection
 EndGlobal
