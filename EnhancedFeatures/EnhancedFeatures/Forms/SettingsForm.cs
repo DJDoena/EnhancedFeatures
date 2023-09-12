@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Reflection;
 using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.EnhancedFeatures.Resources;
 
@@ -21,24 +20,24 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             Plugin = plugin;
 
-            InitializeComponent();
+            this.InitializeComponent();
 
-            SetControls();
+            this.SetControls();
 
-            SetSettings();
+            this.SetSettings();
 
-            SetLabels();
+            this.SetLabels();
 
-            SetComboBoxes();
+            this.SetComboBoxes();
         }
 
         #region SetControls
 
         private void SetControls()
         {
-            SetLabelTabPageControls();
+            this.SetLabelTabPageControls();
 
-            SetPluginTabPageControls();
+            this.SetPluginTabPageControls();
         }
 
         private void SetLabelTabPageControls()
@@ -70,9 +69,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                     top = 6 + ((featureIndex - 1 - Half) * Offset);
                 }
 
-                AddFeatureLabel(featureIndex, left, top + 3);
+                this.AddFeatureLabel(featureIndex, left, top + 3);
 
-                AddFeatureTextBoxes(featureIndex, left + 70, top);
+                this.AddFeatureTextBoxes(featureIndex, left + 70, top);
             }
 
             LabelTabPage.Controls.AddRange(FeatureLabels);
@@ -83,7 +82,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             , Int32 left
             , Int32 top)
         {
-            Label label = new Label();
+            var label = new Label();
 
             label.AutoSize = true;
             label.Location = new System.Drawing.Point(left, top);
@@ -98,7 +97,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             , Int32 left
             , Int32 top)
         {
-            TextBox textBox = new TextBox();
+            var textBox = new TextBox();
 
             textBox.Location = new System.Drawing.Point(left, top);
             textBox.MaxLength = 30;
@@ -136,7 +135,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                     top = 6 + ((featureIndex - 1 - Half) * Offset);
                 }
 
-                AddFeatureCheckBox(featureIndex, left, top);
+                this.AddFeatureCheckBox(featureIndex, left, top);
             }
 
             PluginTabPage.Controls.AddRange(FeatureCheckBoxes);
@@ -146,7 +145,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             , Int32 left
             , Int32 top)
         {
-            CheckBox checkBox = new CheckBox();
+            var checkBox = new CheckBox();
 
             checkBox.AutoSize = true;
             checkBox.Location = new System.Drawing.Point(left, top);
@@ -162,11 +161,11 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetSettings()
         {
-            SetInvelosSettings();
+            this.SetInvelosSettings();
 
-            SetPluginSettings();
+            this.SetPluginSettings();
 
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             ExportToCollectionXmlCheckBox.Checked = dv.ExportToCollectionXml;
 
@@ -175,7 +174,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetInvelosSettings()
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             IdCheckBox.Checked = dv.Id;
             TitleCheckBox.Checked = dv.Title;
@@ -215,13 +214,13 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetPluginSettings()
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
-                CheckBox checkBox = FeatureCheckBoxes[featureIndex - 1];
+                var checkBox = FeatureCheckBoxes[featureIndex - 1];
 
-                String label = dv.FeatureLabels[featureIndex];
+                var label = dv.FeatureLabels[featureIndex];
 
                 checkBox.Text = label;
 
@@ -261,7 +260,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetComboBoxes()
         {
-            Dictionary<Int32, CultureInfo> uiLanguages = new Dictionary<Int32, CultureInfo>(3);
+            var uiLanguages = new Dictionary<Int32, CultureInfo>(3);
 
             AddLanguage(uiLanguages, "en");
             AddLanguage(uiLanguages, "de");
@@ -276,20 +275,20 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private static void AddLanguage(Dictionary<Int32, CultureInfo> uiLanguages
             , String language)
         {
-            CultureInfo ci = CultureInfo.GetCultureInfo(language);
+            var ci = CultureInfo.GetCultureInfo(language);
 
             uiLanguages.Add(ci.LCID, ci);
         }
 
         private void SetLabels()
         {
-            SetInvelosLabels();
+            this.SetInvelosLabels();
 
-            SetPluginLabels();
+            this.SetPluginLabels();
 
             #region Misc
 
-            Text = Texts.Options;
+            this.Text = Texts.Options;
 
             #region TabPages
 
@@ -338,25 +337,25 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void OnDiscardButtonClick(Object sender
             , EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.Cancel;
 
-            Close();
+            this.Close();
         }
 
         private void OnSaveButtonClick(Object sender
             , EventArgs e)
         {
-            SaveInvelosSettings();
+            this.SaveInvelosSettings();
 
-            SavePluginSettings();
+            this.SavePluginSettings();
 
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             dv.FilterCount = (Byte)(FilterCountUpDown.Value);
 
             dv.ExportToCollectionXml = ExportToCollectionXmlCheckBox.Checked;
 
-            CultureInfo uiLanguage = GetUiLanguage();
+            var uiLanguage = this.GetUiLanguage();
 
             dv.UiLanguage = uiLanguage;
 
@@ -364,14 +363,14 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             MessageBoxTexts.Culture = uiLanguage;
 
-            DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.OK;
 
-            Close();
+            this.Close();
         }
 
         private void SaveInvelosSettings()
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             dv.Id = IdCheckBox.Checked;
             dv.Title = TitleCheckBox.Checked;
@@ -411,7 +410,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SavePluginSettings()
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
@@ -423,9 +422,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private CultureInfo GetUiLanguage()
         {
-            KeyValuePair<Int32, CultureInfo> kvp = (KeyValuePair<Int32, CultureInfo>)(UiLanguageComboBox.SelectedItem);
+            var kvp = (KeyValuePair<Int32, CultureInfo>)(UiLanguageComboBox.SelectedItem);
 
-            CultureInfo ci = kvp.Value;
+            var ci = kvp.Value;
 
             return (ci);
         }

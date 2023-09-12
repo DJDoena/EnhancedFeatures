@@ -1,18 +1,18 @@
 [Setup]
 AppName=Enhanced Features
 AppId=EnhancedFeatures
-AppVerName=Enhanced Features 1.0.0.2
-AppCopyright=Copyright © Doena Soft. 2017 - 2022
+AppVerName=Enhanced Features 1.0.1.0
+AppCopyright=Copyright © Doena Soft. 2017 - 2023
 AppPublisher=Doena Soft.
 AppPublisherURL=http://doena-journal.net/en/dvd-profiler-tools/
 DefaultDirName={commonpf32}\Doena Soft.\Enhanced Features
 ; DefaultGroupName=Doena Soft.
 DirExistsWarning=No
-SourceDir=..\EnhancedFeatures\bin\x86\EnhancedFeatures
+SourceDir=..\EnhancedFeatures\bin\x86\Debug\net481
 Compression=zip/9
 AppMutex=InvelosDVDPro
 OutputBaseFilename=EnhancedFeaturesSetup
-OutputDir=..\..\..\..\EnhancedFeaturesSetup\Setup\EnhancedFeatures
+OutputDir=..\EnhancedFeatures\EnhancedFeaturesSetup\Setup\EnhancedFeatures
 MinVersion=0,6.1sp1
 PrivilegesRequired=admin
 WizardStyle=modern
@@ -21,7 +21,7 @@ ShowLanguageDialog=no
 VersionInfoCompany=Doena Soft.
 VersionInfoCopyright=2017 - 2022
 VersionInfoDescription=Enhanced Features Setup
-VersionInfoVersion=1.0.0.2
+VersionInfoVersion=1.0.1.0
 UninstallDisplayIcon={app}\djdsoft.ico
 
 [Languages]
@@ -39,12 +39,20 @@ Source: "djdsoft.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "DoenaSoft.EnhancedFeatures.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "DoenaSoft.EnhancedFeatures.pdb"; DestDir: "{app}"; Flags: ignoreversion
 
+Source: "DoenaSoft.AbstractionLayer.Web.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "DoenaSoft.DVDProfilerHelper.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.ToolBox.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "DoenaSoft.EnhancedFeatures.Interface.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "DoenaSoft.WindowsAPICodePack.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "DoenaSoft.WindowsAPICodePack.Shell.dll"; DestDir: "{app}"; Flags: ignoreversion
+
+Source: "System.Buffers.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "System.Memory.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "System.Numerics.Vectors.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "System.Resources.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "de\DoenaSoft.EnhancedFeatures.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
 Source: "de\DoenaSoft.DVDProfilerHelper.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.EnhancedFeatures.Resources;
+using DoenaSoft.ToolBox.Generics;
 using Invelos.DVDProfilerPlugin;
 
 namespace DoenaSoft.DVDProfiler.EnhancedFeatures
@@ -26,15 +26,15 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             Plugin = plugin;
             Profile = profile;
 
-            InitializeComponent();
+            this.InitializeComponent();
 
-            SetPluginTabPageControls();
+            this.SetPluginTabPageControls();
 
             FeatureManager = new FeatureManager(Profile);
 
-            SetData();
+            this.SetData();
 
-            SetReadOnlies();
+            this.SetReadOnlies();
 
             DataChanged = false;
         }
@@ -66,7 +66,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                     top = 6 + ((featureIndex - 1 - Half) * Offset);
                 }
 
-                AddFeatureCheckBox(featureIndex, left, top);
+                this.AddFeatureCheckBox(featureIndex, left, top);
             }
 
             PluginTabPage.Controls.AddRange(FeatureCheckBoxes);
@@ -76,14 +76,15 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             , Int32 left
             , Int32 top)
         {
-            CheckBox checkBox = new CheckBox();
-
-            checkBox.AutoSize = true;
-            checkBox.Location = new System.Drawing.Point(left, top);
-            checkBox.Name = $"Feature{featureIndex}CheckBox";
-            checkBox.Size = new System.Drawing.Size(62, 17);
-            checkBox.TabIndex = featureIndex - 1;
-            checkBox.UseVisualStyleBackColor = true;
+            var checkBox = new CheckBox()
+            {
+                AutoSize = true,
+                Location = new System.Drawing.Point(left, top),
+                Name = $"Feature{featureIndex}CheckBox",
+                Size = new System.Drawing.Size(62, 17),
+                TabIndex = featureIndex - 1,
+                UseVisualStyleBackColor = true,
+            };
 
             FeatureCheckBoxes[featureIndex - 1] = checkBox;
         }
@@ -98,7 +99,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                 SaveButton.Enabled = false;
 
-                SetControlsReadonly(Controls);
+                this.SetControlsReadonly(this.Controls);
             }
         }
 
@@ -114,7 +115,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                     }
                     else
                     {
-                        SetControlsReadonly(control.Controls);
+                        this.SetControlsReadonly(control.Controls);
                     }
                 }
             }
@@ -124,25 +125,25 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetData()
         {
-            SetInvelosCheckeds();
+            this.SetInvelosCheckeds();
 
-            SetPluginCheckeds();
+            this.SetPluginCheckeds();
 
-            SetLabels();
+            this.SetLabels();
         }
 
         private void SetLabels()
         {
-            SetInvelosLabels();
+            this.SetInvelosLabels();
 
-            SetPluginLabels();
+            this.SetPluginLabels();
 
-            SetMiscLabels();
+            this.SetMiscLabels();
         }
 
         private void SetPluginLabels()
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
@@ -152,7 +153,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetPluginCheckeds()
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
@@ -261,7 +262,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void OnSaveButtonClick(Object sender
             , EventArgs e)
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
@@ -274,22 +275,22 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             DataChanged = false;
 
-            Close();
+            this.Close();
         }
 
         private void OnDiscardButtonClick(Object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void OnOptionsToolStripMenuItemClick(Object sender
             , EventArgs e)
         {
-            using (SettingsForm form = new SettingsForm(Plugin))
+            using (var form = new SettingsForm(Plugin))
             {
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    SetLabels();
+                    this.SetLabels();
 
                     Plugin.RegisterCustomFields();
                 }
@@ -298,7 +299,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void OnExportToXMLToolStripMenuItemClick(Object sender, EventArgs e)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog())
+            using (var sfd = new SaveFileDialog())
             {
                 sfd.AddExtension = true;
                 sfd.DefaultExt = ".xml";
@@ -310,11 +311,11 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    EnhancedFeatures ef = GetEnhancedFeaturesForXmlStructure();
+                    var ef = this.GetEnhancedFeaturesForXmlStructure();
 
                     try
                     {
-                        DVDProfilerSerializer<EnhancedFeatures>.Serialize(sfd.FileName, ef);
+                        Serializer<EnhancedFeatures>.Serialize(sfd.FileName, ef);
                         MessageBox.Show(MessageBoxTexts.Done, MessageBoxTexts.InformationHeader, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
@@ -328,21 +329,21 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private EnhancedFeatures GetEnhancedFeaturesForXmlStructure()
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
-            EnhancedFeatures ef = new EnhancedFeatures();
+            var ef = new EnhancedFeatures();
 
             const Byte FeatureCount = Plugin.FeatureCount;
 
-            List<Feature> features = new List<Feature>();
+            var features = new List<Feature>();
 
             for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
             {
-                Boolean isChecked = FeatureCheckBoxes[featureIndex - 1].Checked;
+                var isChecked = FeatureCheckBoxes[featureIndex - 1].Checked;
 
                 if (isChecked)
                 {
-                    Feature feature = new Feature();
+                    var feature = new Feature();
 
                     feature.Index = featureIndex;
 
@@ -362,7 +363,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void OnImportFromXMLToolStripMenuItemClick(Object sender
             , EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
+            using (var ofd = new OpenFileDialog())
             {
                 ofd.CheckFileExists = true;
                 ofd.Filter = "XML files|*.xml";
@@ -376,7 +377,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        ef = DVDProfilerSerializer<EnhancedFeatures>.Deserialize(ofd.FileName);
+                        ef = Serializer<EnhancedFeatures>.Deserialize(ofd.FileName);
                     }
                     catch (Exception ex)
                     {
@@ -386,7 +387,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     if (ef?.Feature != null)
                     {
-                        SetEnhancedFeaturesFromXmlStructure(ef.Feature);
+                        this.SetEnhancedFeaturesFromXmlStructure(ef.Feature);
                     }
                 }
             }
@@ -394,7 +395,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private void SetEnhancedFeaturesFromXmlStructure(Feature[] features)
         {
-            foreach (Feature feature in features)
+            foreach (var feature in features)
             {
                 FeatureCheckBoxes[feature.Index - 1].Checked = feature.Value;
             }
@@ -403,12 +404,12 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void OnCheckForUpdatesToolStripMenuItemClick(Object sender, EventArgs e)
         {
             OnlineAccess.Init("Doena Soft.", "EnhancedFeatures");
-            OnlineAccess.CheckForNewVersion("http://doena-soft.de/dvdprofiler/3.9.0/versions.xml", this, "EnhancedFeatures", GetType().Assembly);
+            OnlineAccess.CheckForNewVersion("http://doena-soft.de/dvdprofiler/3.9.0/versions.xml", this, "EnhancedFeatures", this.GetType().Assembly);
         }
 
         private void OnAboutToolStripMenuItemClick(Object sender, EventArgs e)
         {
-            using (AboutBox aboutBox = new AboutBox(GetType().Assembly))
+            using (var aboutBox = new AboutBox(this.GetType().Assembly))
             {
                 aboutBox.ShowDialog();
             }
@@ -438,7 +439,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             Plugin.ImportOptions();
 
-            SetPluginLabels();
+            this.SetPluginLabels();
         }
 
         private void OnExportOptionsToolStripMenuItemClick(Object sender
@@ -450,9 +451,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         private void OnCopyAllToolStripMenuItemClick(Object sender
             , EventArgs e)
         {
-            EnhancedFeatures ef = GetEnhancedFeaturesForXmlStructure();
+            var ef = this.GetEnhancedFeaturesForXmlStructure();
 
-            String xml = DVDProfilerSerializer<EnhancedFeatures>.ToString(ef);
+            var xml = Serializer<EnhancedFeatures>.ToString(ef);
 
             try
             {
@@ -472,9 +473,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             try
             {
-                String xml = Clipboard.GetText();
+                var xml = Clipboard.GetText();
 
-                ef = DVDProfilerSerializer<EnhancedFeatures>.FromString(xml);
+                ef = Serializer<EnhancedFeatures>.FromString(xml);
             }
             catch
             {
@@ -484,7 +485,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             if (ef?.Feature != null)
             {
-                SetEnhancedFeaturesFromXmlStructure(ef.Feature);
+                this.SetEnhancedFeaturesFromXmlStructure(ef.Feature);
             }
         }
     }

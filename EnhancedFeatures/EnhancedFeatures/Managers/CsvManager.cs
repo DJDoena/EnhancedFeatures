@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using DoenaSoft.DVDProfiler.EnhancedFeatures.Resources;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
+using DoenaSoft.DVDProfiler.EnhancedFeatures.Resources;
 using Invelos.DVDProfilerPlugin;
 using Microsoft.WindowsAPICodePack.Taskbar;
-using System.Reflection;
 
 namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 {
@@ -24,7 +22,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         internal void Export(Boolean exportAll)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog())
+            using (var sfd = new SaveFileDialog())
             {
                 sfd.AddExtension = true;
                 sfd.DefaultExt = ".csv";
@@ -38,7 +36,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                 {
                     Cursor.Current = Cursors.WaitCursor;
 
-                    using (ProgressWindow progressWindow = new ProgressWindow())
+                    using (var progressWindow = new ProgressWindow())
                     {
                         #region Progress
 
@@ -48,13 +46,13 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                         #endregion
 
-                        CultureInfo currentCulture = Application.CurrentCulture;
+                        var currentCulture = Application.CurrentCulture;
 
-                        String listSeparator = currentCulture.TextInfo.ListSeparator;
+                        var listSeparator = currentCulture.TextInfo.ListSeparator;
 
-                        String dateFormat = currentCulture.DateTimeFormat.ShortDatePattern;
+                        var dateFormat = currentCulture.DateTimeFormat.ShortDatePattern;
 
-                        Object[] ids = (exportAll) ? ((Object[])(Plugin.Api.GetAllProfileIDs())) : ((Object[])(Plugin.Api.GetFlaggedProfileIDs()));
+                        var ids = (exportAll) ? ((Object[])(Plugin.Api.GetAllProfileIDs())) : ((Object[])(Plugin.Api.GetFlaggedProfileIDs()));
 
                         #region Progress
 
@@ -67,7 +65,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                             TaskbarManager.Instance.SetProgressValue(0, progressWindow.ProgressBar.Maximum);
                         }
 
-                        Int32 onePercent = progressWindow.ProgressBar.Maximum / 100;
+                        var onePercent = progressWindow.ProgressBar.Maximum / 100;
 
                         if ((progressWindow.ProgressBar.Maximum % 100) != 0)
                         {
@@ -78,17 +76,17 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                         try
                         {
-                            using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create, FileAccess.Write, FileShare.Read))
+                            using (var fs = new FileStream(sfd.FileName, FileMode.Create, FileAccess.Write, FileShare.Read))
                             {
-                                using (StreamWriter sw = new StreamWriter(fs, Encoding.UTF8))
+                                using (var sw = new StreamWriter(fs, Encoding.UTF8))
                                 {
-                                    DefaultValues dv = Plugin.Settings.DefaultValues;
+                                    var dv = Plugin.Settings.DefaultValues;
 
                                     #region Header
 
                                     WriteInvelosBasicsHeader(sw, dv, listSeparator);
 
-                                    WriteInvelosFeaturesHeader(sw, dv, listSeparator);
+                                    this.WriteInvelosFeaturesHeader(sw, dv, listSeparator);
 
                                     WritePluginHeader(sw, dv, listSeparator);
 
@@ -96,18 +94,18 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                                     #endregion
 
-                                    for (Int32 profileIndex = 0; profileIndex < ids.Length; profileIndex++)
+                                    for (var profileIndex = 0; profileIndex < ids.Length; profileIndex++)
                                     {
                                         #region Row
 
-                                        String id = ids[profileIndex].ToString();
+                                        var id = ids[profileIndex].ToString();
 
                                         IDVDInfo profile;
                                         Plugin.Api.DVDByProfileID(out profile, id, PluginConstants.DATASEC_AllSections, 0);
 
                                         WriteInvelosBasicsRow(sw, profile, dv, listSeparator);
 
-                                        WriteInvelosFeaturesRow(sw, profile, dv, listSeparator);
+                                        this.WriteInvelosFeaturesRow(sw, profile, dv, listSeparator);
 
                                         WritePluginRow(sw, profile, dv, listSeparator);
 
@@ -504,7 +502,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             , DefaultValues dv
             , String listSeparator)
         {
-            FeatureManager featureManager = new FeatureManager(profile);
+            var featureManager = new FeatureManager(profile);
 
             for (Byte featureIndex = 1; featureIndex <= Plugin.FeatureCount; featureIndex++)
             {
@@ -519,7 +517,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             , Boolean value
             , String listSeparator)
         {
-            String text = value ? "X" : String.Empty;
+            var text = value ? "X" : String.Empty;
 
             WriteText(sw, text, listSeparator);
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using DoenaSoft.DVDProfiler.DVDProfilerHelper;
 using DoenaSoft.DVDProfiler.EnhancedFeatures.Resources;
+using DoenaSoft.ToolBox.Generics;
 using Invelos.DVDProfilerPlugin;
 using Microsoft.WindowsAPICodePack.Taskbar;
 
@@ -21,7 +22,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         internal void Export(Boolean exportAll)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog())
+            using (var sfd = new SaveFileDialog())
             {
                 sfd.AddExtension = true;
                 sfd.DefaultExt = ".xml";
@@ -37,7 +38,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                     EnhancedFeaturesList efs;
 
                     Cursor.Current = Cursors.WaitCursor;
-                    using (ProgressWindow progressWindow = new ProgressWindow())
+                    using (var progressWindow = new ProgressWindow())
                     {
                         #region Progress
 
@@ -49,7 +50,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                         #endregion
 
-                        ids = GetProfileIds(exportAll);
+                        ids = this.GetProfileIds(exportAll);
 
                         efs = new EnhancedFeaturesList();
                         efs.Profiles = new Profile[ids.Length];
@@ -71,14 +72,14 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                         #endregion
 
-                        for (Int32 i = 0; i < ids.Length; i++)
+                        for (var i = 0; i < ids.Length; i++)
                         {
                             String id;
                             IDVDInfo profile;
 
                             id = ids[i].ToString();
                             Plugin.Api.DVDByProfileID(out profile, id, PluginConstants.DATASEC_AllSections, 0);
-                            efs.Profiles[i] = GetXmlProfile(profile);
+                            efs.Profiles[i] = this.GetXmlProfile(profile);
 
                             #region Progress
 
@@ -97,7 +98,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                         try
                         {
-                            DVDProfilerSerializer<EnhancedFeaturesList>.Serialize(sfd.FileName, efs);
+                            Serializer<EnhancedFeaturesList>.Serialize(sfd.FileName, efs);
 
                             #region Progress
 
@@ -144,26 +145,26 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private Profile GetXmlProfile(IDVDInfo profile)
         {
-            DefaultValues dv = Plugin.Settings.DefaultValues;
+            var dv = Plugin.Settings.DefaultValues;
 
-            FeatureManager featureManager = new FeatureManager(profile);
+            var featureManager = new FeatureManager(profile);
 
-            Profile xmlProfile = new Profile();
+            var xmlProfile = new Profile();
 
             xmlProfile.Id = profile.GetProfileID();
             xmlProfile.Title = profile.GetTitle();
 
             const Byte FeatureCount = Plugin.FeatureCount;
 
-            List<Feature> features = new List<Feature>(FeatureCount);
+            var features = new List<Feature>(FeatureCount);
 
             for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
             {
-                Boolean value = featureManager.GetFeature(featureIndex);
+                var value = featureManager.GetFeature(featureIndex);
 
                 if (value)
                 {
-                    Feature feature = new Feature();
+                    var feature = new Feature();
 
                     feature.Index = featureIndex;
 
@@ -186,7 +187,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         internal void Import(Boolean importAll)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
+            using (var ofd = new OpenFileDialog())
             {
                 ofd.CheckFileExists = true;
                 ofd.Filter = "XML files|*.xml";
@@ -202,7 +203,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        efs = DVDProfilerSerializer<EnhancedFeaturesList>.Deserialize(ofd.FileName);
+                        efs = Serializer<EnhancedFeaturesList>.Deserialize(ofd.FileName);
                     }
                     catch (Exception ex)
                     {
@@ -212,11 +213,11 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     if (efs != null)
                     {
-                        Int32 count = 0;
+                        var count = 0;
 
                         if (efs.Profiles?.Length > 0)
                         {
-                            using (ProgressWindow progressWindow = new ProgressWindow())
+                            using (var progressWindow = new ProgressWindow())
                             {
                                 #region Progress
 
@@ -226,9 +227,9 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                                 #endregion
 
-                                Object[] ids = GetProfileIds(importAll);
+                                var ids = this.GetProfileIds(importAll);
 
-                                Dictionary<String, Boolean> profileIds = new Dictionary<String, Boolean>(ids.Length);
+                                var profileIds = new Dictionary<String, Boolean>(ids.Length);
 
                                 #region Progress
 
@@ -241,7 +242,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                                     TaskbarManager.Instance.SetProgressValue(0, progressWindow.ProgressBar.Maximum);
                                 }
 
-                                Int32 onePercent = progressWindow.ProgressBar.Maximum / 100;
+                                var onePercent = progressWindow.ProgressBar.Maximum / 100;
 
                                 if ((progressWindow.ProgressBar.Maximum % 100) != 0)
                                 {
@@ -250,24 +251,24 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                                 #endregion
 
-                                for (Int32 i = 0; i < ids.Length; i++)
+                                for (var i = 0; i < ids.Length; i++)
                                 {
                                     profileIds.Add(ids[i].ToString(), true);
                                 }
 
-                                foreach (Profile xmlProfile in efs.Profiles)
+                                foreach (var xmlProfile in efs.Profiles)
                                 {
                                     if ((xmlProfile?.EnhancedFeatures != null) && (profileIds.ContainsKey(xmlProfile.Id)))
                                     {
-                                        IDVDInfo profile = Plugin.Api.CreateDVD();
+                                        var profile = Plugin.Api.CreateDVD();
 
                                         profile.SetProfileID(xmlProfile.Id);
 
-                                        FeatureManager featureManager = new FeatureManager(profile);
+                                        var featureManager = new FeatureManager(profile);
 
-                                        Feature[] features = xmlProfile.EnhancedFeatures;
+                                        var features = xmlProfile.EnhancedFeatures;
 
-                                        foreach (Feature feature in features)
+                                        foreach (var feature in features)
                                         {
                                             featureManager.SetFeature(feature.Index, feature.Value);
                                         }

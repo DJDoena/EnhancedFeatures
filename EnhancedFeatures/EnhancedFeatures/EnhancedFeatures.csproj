@@ -1,155 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A5DE367A-55C9-4D17-8A60-7C4B6D21608D}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>DJDSOFT.ICO</ApplicationIcon>
-    <AssemblyKeyContainerName>
-    </AssemblyKeyContainerName>
-    <AssemblyName>DoenaSoft.EnhancedFeatures</AssemblyName>
-    <DefaultClientScript>JScript</DefaultClientScript>
-    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
-    <DefaultTargetSchema>IE50</DefaultTargetSchema>
-    <DelaySign>false</DelaySign>
-    <OutputType>Library</OutputType>
-    <RootNamespace>DoenaSoft.DVDProfiler.EnhancedFeatures</RootNamespace>
-    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>
-    </StartupObject>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\EnhancedFeatures\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <BaseAddress>285212672</BaseAddress>
-    <FileAlignment>4096</FileAlignment>
-    <RegisterForComInterop>true</RegisterForComInterop>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>EnhancedFeatures.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.XML" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\PluginInterface\DVDProfiler.Interface\PluginInterface.5.cs">
-      <Link>PluginInterface.5.cs</Link>
-    </Compile>
-    <Compile Include="InternalConstants.cs" />
-    <Compile Include="Forms\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\SettingsForm.Designer.cs">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Managers\CsvManager.cs" />
-    <Compile Include="Resources\MessageBoxTexts.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MessageBoxTexts.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\Texts.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Texts.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Settings\DefaultValues.cs" />
-    <Compile Include="Settings\ExcelFeatures.cs" />
-    <Compile Include="Settings\FeatureLabels.cs" />
-    <Compile Include="Settings\Settings.cs" />
-    <Compile Include="Managers\XmlManager.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Plugin.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Managers\FeatureManager.cs" />
-    <EmbeddedResource Include="Resources\Texts.de.resx">
-      <DependentUpon>Texts.resx</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DJDSOFT.ICO">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="EnhancedFeatures.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Forms\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SettingsForm.resx">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\MessageBoxTexts.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MessageBoxTexts.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\MessageBoxTexts.de.resx">
-      <DependentUpon>MessageBoxTexts.resx</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Texts.fr.resx">
-      <DependentUpon>Texts.resx</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Texts.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Texts.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="DoenaSoft.DVDProfilerHelper">
-      <Version>2.2.9</Version>
-    </PackageReference>
-    <PackageReference Include="DoenaSoft.EnhancedFeatures.Interface">
-      <Version>1.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="DoenaSoft.WindowsAPICodePack">
-      <Version>1.1.1</Version>
-    </PackageReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>"%25ProgramFiles(x86)%25\Inno Setup 6\iscc.exe" ..\..\..\..\EnhancedFeaturesSetup\Setup.iss</PostBuildEvent>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net481</TargetFrameworks>
+		<UseWindowsForms>true</UseWindowsForms>
+		<Platforms>x86</Platforms>
+		<OutputType>Library</OutputType>
+		<RootNamespace>DoenaSoft.DVDProfiler.EnhancedFeatures</RootNamespace>
+		<AssemblyName>DoenaSoft.EnhancedFeatures</AssemblyName>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>EnhancedFeatures.snk</AssemblyOriginatorKeyFile>
+		<Title>Doena Soft. Enhanced Features</Title>
+		<Company>Doena Soft.</Company>
+		<Authors>DJ Doena</Authors>
+		<Version>1.0.1</Version>
+		<FileVersion>1.0.1</FileVersion>
+		<EnableComHosting>true</EnableComHosting>
+		<ApplicationIcon>DJDSOFT.ICO</ApplicationIcon>
+		<Copyright>Copyright © Doena Soft. 2017 - 2023"</Copyright>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Include="..\..\PluginInterface\DVDProfiler.Interface\PluginInterface.5.cs" Link="PluginInterface.5.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="DoenaSoft.DVDProfilerHelper" Version="3.0.4" />
+	  <PackageReference Include="DoenaSoft.EnhancedFeatures.Interface" Version="2.0.1" />
+	  <PackageReference Include="DoenaSoft.WindowsAPICodePack" Version="2.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="System.Web" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="djdsoft.ico">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="&quot;%25ProgramFiles(x86)%25\Inno Setup 6\iscc.exe&quot; &quot;..\EnhancedFeaturesSetup\Setup.iss&quot;" />
+	</Target>
+
 </Project>

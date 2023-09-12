@@ -22,15 +22,15 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             get
             {
-                FieldInfo field = GetLabelField(featureIndex);
+                var field = this.GetLabelField(featureIndex);
 
-                Boolean value = (Boolean)(field.GetValue(DefaultValues));
+                var value = (Boolean)(field.GetValue(DefaultValues));
 
                 return (value);
             }
             set
             {
-                FieldInfo field = GetLabelField(featureIndex);
+                var field = this.GetLabelField(featureIndex);
 
                 field.SetValue(DefaultValues, value);
             }

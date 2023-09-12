@@ -298,7 +298,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         internal static CultureInfo GetUILanguage()
         {
-            String uiCulture = Thread.CurrentThread.CurrentUICulture.Name;
+            var uiCulture = Thread.CurrentThread.CurrentUICulture.Name;
 
             CultureInfo uiLanguage;
             if (uiCulture.StartsWith("de"))
