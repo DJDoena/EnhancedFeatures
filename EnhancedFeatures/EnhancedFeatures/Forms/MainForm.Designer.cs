@@ -153,7 +153,7 @@
             this.ExportOptionsToolStripMenuItem,
             this.ImportOptionsToolStripMenuItem});
             this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.ToolsToolStripMenuItem.Text = "&Tools";
             // 
             // OptionsToolStripMenuItem

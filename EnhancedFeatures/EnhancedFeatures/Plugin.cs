@@ -94,8 +94,6 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         public void Load(IDVDProfilerAPI api)
         {
-            //System.Diagnostics.Debugger.Launch();
-
             this.Api = api;
 
             if (Directory.Exists(ApplicationPath) == false)
@@ -443,8 +441,6 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
                 #endregion
 
                 var dv = this.Settings.DefaultValues;
-
-                //System.Diagnostics.Debugger.Launch();
 
                 for (Byte featureIndex = 1; featureIndex <= FeatureCount; featureIndex++)
                 {

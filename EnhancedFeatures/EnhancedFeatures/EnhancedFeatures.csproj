@@ -17,30 +17,65 @@
 		<EnableComHosting>true</EnableComHosting>
 		<ApplicationIcon>DJDSOFT.ICO</ApplicationIcon>
 		<Copyright>Copyright © Doena Soft. 2017 - 2023"</Copyright>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Include="..\..\PluginInterface\DVDProfiler.Interface\PluginInterface.5.cs" Link="PluginInterface.5.cs" />
+		<Compile Include="..\..\PluginInterface\DVDProfiler.Interface\PluginInterface.5.cs" Link="PluginInterface.5.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="DoenaSoft.DVDProfilerHelper" Version="3.0.4" />
-	  <PackageReference Include="DoenaSoft.EnhancedFeatures.Interface" Version="2.0.1" />
-	  <PackageReference Include="DoenaSoft.WindowsAPICodePack" Version="2.0.0" />
+		<PackageReference Include="DoenaSoft.DVDProfilerHelper" Version="3.0.4" />
+		<PackageReference Include="DoenaSoft.EnhancedFeatures.Interface" Version="2.0.3" />
+		<PackageReference Include="DoenaSoft.WindowsAPICodePack" Version="2.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="System.Web" />
+		<Reference Include="System.Web" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="djdsoft.ico">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
+		<Compile Update="Resources\MessageBoxTexts.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>MessageBoxTexts.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Resources\Texts.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Texts.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Resources\MessageBoxTexts.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>MessageBoxTexts.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\MessageBoxTexts.de.resx">
+			<DependentUpon>MessageBoxTexts.resx</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Texts.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Texts.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Texts.de.resx">
+			<DependentUpon>Texts.resx</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Resources\Texts.fr.resx">
+			<DependentUpon>Texts.resx</DependentUpon>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="djdsoft.ico">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-	  <Exec Command="&quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe&quot; /codebase &quot;bin\$(Platform)\$(Configuration)\$(TargetFramework)\DoenaSoft.EnhancedFeatures.dll&quot;&#xD;&#xA;&quot;%25ProgramFiles(x86)%25\Inno Setup 6\iscc.exe&quot; &quot;..\EnhancedFeaturesSetup\Setup.iss&quot;" />
+		<Exec Command="&quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe&quot; /codebase &quot;bin\$(Platform)\$(Configuration)\$(TargetFramework)\DoenaSoft.EnhancedFeatures.dll&quot;&#xD;&#xA;&quot;%25ProgramFiles(x86)%25\Inno Setup 6\iscc.exe&quot; &quot;..\EnhancedFeaturesSetup\Setup.iss&quot;" />
 	</Target>
 
 </Project>
