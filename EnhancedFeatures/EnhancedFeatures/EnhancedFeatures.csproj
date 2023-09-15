@@ -75,7 +75,7 @@
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="&quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe&quot; /codebase &quot;bin\$(Platform)\$(Configuration)\$(TargetFramework)\DoenaSoft.EnhancedFeatures.dll&quot;&#xD;&#xA;&quot;%25ProgramFiles(x86)%25\Inno Setup 6\iscc.exe&quot; &quot;..\EnhancedFeaturesSetup\Setup.iss&quot;" />
+		<Exec Command="&quot;C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegAsm.exe&quot; /codebase &quot;bin\$(Platform)\$(Configuration)\$(TargetFramework)\DoenaSoft.EnhancedFeatures.dll&quot;&#xD;&#xA;IF &quot;$(Configuration)&quot;==&quot;Release&quot; &quot;%25ProgramFiles(x86)%25\Inno Setup 6\iscc.exe&quot; &quot;..\EnhancedFeaturesSetup\Setup.iss&quot;" />
 	</Target>
 
 </Project>
