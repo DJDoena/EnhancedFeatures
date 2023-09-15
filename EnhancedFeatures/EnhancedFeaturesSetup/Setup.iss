@@ -40,7 +40,7 @@ Source: "DoenaSoft.EnhancedFeatures.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "DoenaSoft.EnhancedFeatures.pdb"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "DoenaSoft.AbstractionLayer.Web.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "DoenaSoft.DVDProfilerHelper.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DoenaSoft.DVDProfiler.Helper.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "DoenaSoft.ToolBox.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "DoenaSoft.EnhancedFeatures.Interface.dll"; DestDir: "{app}"; Flags: ignoreversion
@@ -55,7 +55,7 @@ Source: "System.Resources.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversio
 Source: "System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "de\DoenaSoft.EnhancedFeatures.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
-Source: "de\DoenaSoft.DVDProfilerHelper.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
+Source: "de\DoenaSoft.DVDProfiler.Helper.resources.dll"; DestDir: "{app}\de"; Flags: ignoreversion
 
 Source: "fr\DoenaSoft.EnhancedFeatures.resources.dll"; DestDir: "{app}\fr"; Flags: ignoreversion
 
