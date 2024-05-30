@@ -16,7 +16,7 @@
 		<FileVersion>1.0.1</FileVersion>
 		<EnableComHosting>true</EnableComHosting>
 		<ApplicationIcon>DJDSOFT.ICO</ApplicationIcon>
-		<Copyright>Copyright © Doena Soft. 2017 - 2023"</Copyright>
+		<Copyright>Copyright © Doena Soft. 2017 - 2024</Copyright>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 		<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
 	</PropertyGroup>
