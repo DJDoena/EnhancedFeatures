@@ -9,7 +9,7 @@
 		<AssemblyName>DoenaSoft.EnhancedFeatures</AssemblyName>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>EnhancedFeatures.snk</AssemblyOriginatorKeyFile>
-		<Title>Doena Soft. DVD Profiler Enhanced Features</Title>
+		<Title>Enhanced Features</Title>
 		<Company>Doena Soft.</Company>
 		<Authors>DJ Doena</Authors>
 		<Version>1.0.1</Version>
@@ -26,7 +26,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DoenaSoft.DVDProfiler.Helper" Version="3.0.5" />
+		<PackageReference Include="DoenaSoft.DVDProfiler.Helper" Version="3.0.8" />
 		<PackageReference Include="DoenaSoft.EnhancedFeatures.Interface" Version="2.0.4" />
 		<PackageReference Include="DoenaSoft.WindowsAPICodePack" Version="2.0.0" />
 	</ItemGroup>
