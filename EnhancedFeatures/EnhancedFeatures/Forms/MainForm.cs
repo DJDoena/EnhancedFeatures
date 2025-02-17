@@ -315,7 +315,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        Serializer<EnhancedFeatures>.Serialize(sfd.FileName, ef);
+                        XmlSerializer<EnhancedFeatures>.Serialize(sfd.FileName, ef);
                         MessageBox.Show(MessageBoxTexts.Done, MessageBoxTexts.InformationHeader, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
@@ -377,7 +377,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        ef = Serializer<EnhancedFeatures>.Deserialize(ofd.FileName);
+                        ef = XmlSerializer<EnhancedFeatures>.Deserialize(ofd.FileName);
                     }
                     catch (Exception ex)
                     {
@@ -453,7 +453,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
         {
             var ef = this.GetEnhancedFeaturesForXmlStructure();
 
-            var xml = Serializer<EnhancedFeatures>.ToString(ef);
+            var xml = XmlSerializer<EnhancedFeatures>.ToString(ef);
 
             try
             {
@@ -475,7 +475,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             {
                 var xml = Clipboard.GetText();
 
-                ef = Serializer<EnhancedFeatures>.FromString(xml);
+                ef = XmlSerializer<EnhancedFeatures>.FromString(xml);
             }
             catch
             {

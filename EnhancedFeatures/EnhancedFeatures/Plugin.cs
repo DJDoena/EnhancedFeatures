@@ -80,6 +80,11 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
         private readonly Dictionary<String, String> FilterTokens;
 
+        static Plugin()
+        {
+            DVDProfilerHelperAssemblyLoader.Load();
+        }
+
         public Plugin()
         {
             FilterTokens = new Dictionary<String, String>();
@@ -105,7 +110,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
             {
                 try
                 {
-                    this.Settings = Serializer<Settings>.Deserialize(SettingsFile);
+                    this.Settings = XmlSerializer<Settings>.Deserialize(SettingsFile);
                 }
                 catch (Exception ex)
                 {
@@ -144,7 +149,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             try
             {
-                Serializer<Settings>.Serialize(SettingsFile, this.Settings);
+                XmlSerializer<Settings>.Serialize(SettingsFile, this.Settings);
             }
             catch (Exception ex)
             {
@@ -783,7 +788,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        dv = Serializer<DefaultValues>.Deserialize(ofd.FileName);
+                        dv = XmlSerializer<DefaultValues>.Deserialize(ofd.FileName);
                     }
                     catch (Exception ex)
                     {
@@ -820,7 +825,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
                     try
                     {
-                        Serializer<DefaultValues>.Serialize(sfd.FileName, dv);
+                        XmlSerializer<DefaultValues>.Serialize(sfd.FileName, dv);
 
                         MessageBox.Show(MessageBoxTexts.Done, MessageBoxTexts.InformationHeader, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -867,7 +872,7 @@ namespace DoenaSoft.DVDProfiler.EnhancedFeatures
 
             var exceptionXml = new ExceptionXml(ex);
 
-            Serializer<ExceptionXml>.Serialize(ErrorFile, exceptionXml);
+            XmlSerializer<ExceptionXml>.Serialize(ErrorFile, exceptionXml);
         }
 
         private Exception WrapCOMException(Exception ex)
