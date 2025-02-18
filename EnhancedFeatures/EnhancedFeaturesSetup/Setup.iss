@@ -1,7 +1,7 @@
 [Setup]
 AppName=Enhanced Features
 AppId=EnhancedFeatures
-AppVerName=Enhanced Features 1.0.2.0
+AppVerName=Enhanced Features 1.0.2
 AppCopyright=Copyright © Doena Soft. 2017 - 2025
 AppPublisher=Doena Soft.
 AppPublisherURL=http://doena-journal.net/en/dvd-profiler-tools/
@@ -21,7 +21,7 @@ ShowLanguageDialog=no
 VersionInfoCompany=Doena Soft.
 VersionInfoCopyright=2017 - 2025
 VersionInfoDescription=Enhanced Features Setup
-VersionInfoVersion=1.0.2.0
+VersionInfoVersion=1.0.2
 UninstallDisplayIcon={app}\djdsoft.ico
 
 [Languages]
